@@ -1,0 +1,192 @@
+
+.slides
+  height: 100% /* Or set a fixed height */
+  overflow: hidden
+  position: relative
+
+.slider
+  font-size: 0
+  height: 100%
+  transition: 0.8s
+  white-space: nowrap
+
+.slider > *
+  background: none 50% no-repeat
+  background-size: cover
+  display: inline-block
+  font-size: 1rem
+  height: 100%
+  vertical-align: top
+  white-space: normal
+  width: 100%
+
+#s1:target ~ .slider
+  transform: translateX(0%)
+
+#s2:target ~ .slider
+  transform: translateX(-100%)
+
+#s3:target ~ .slider
+  transform: translateX(-200%)
+
+#s4:target ~ .slider
+  transform: translateX(-300%)
+
+.slider
+  color: $white
+
+  .button
+    button(300px)
+
+.s2
+
+  h2
+    font-size: 1.5em
+    letter-spacing: 1px
+    line-height: 1.2em
+    margin-top: 5em
+    padding-bottom: 30px
+    primary-font($bold)
+    text-transform: uppercase
+
+  h3
+    font-size: 1.375em
+    letter-spacing: 3px
+    padding: 16px 0 10px 90px
+    primary-font($bold)
+    line-height: 1.3em
+    text-transform: uppercase
+
+  h4
+    font-size: 0.9375em
+    line-height: 1.4666666666666666em
+    primary-font($semibold)
+
+  [class^="icon-"]
+    font-size: 3.5em
+    left: 0
+    line-height: 80px
+    position: absolute
+    top: 0
+
+  span.icon-weight
+    font-size: 4.5em
+    padding-top: 3px
+
+  span.icon-heart
+    font-size: 4em
+    padding-top: 3px
+
+  .cell.three
+    width: 25%
+
+    &.first
+      width: 36%
+
+      h3
+        padding-left: 70px
+
+    &.last
+      width: 29%
+
+      h3
+        padding-left: 77px
+
+  p
+    font-size: 13.5px
+
+.s3
+
+  .snipe
+    display: block
+
+  h5
+    font-size: 1.8125em
+    letter-spacing: 2px
+    line-height: 1.2413793103448276em
+    margin: 17px 0 24px 42px
+    primary-font($light)
+    text-transform: uppercase
+
+  h6
+    display: inline-block
+    font-size: 1.275em
+    letter-spacing: 4px
+    line-height: 1.2727272727272727em
+    primary-font($semibold)
+    text-transform: uppercase
+    vertical-align: middle
+
+.cell
+  display: inline-block
+  position: relative
+  vertical-align: top
+
+  &.three
+    margin-right: 4.5%
+    width: 30%
+
+    &.last
+      margin-right: 0
+
+  .button
+    width: 100%
+
+  &.two
+    margin: 2em 8% 0 0
+    width: 33%
+
+    &.last
+      margin-right: 0
+      width: 58%
+
+  p
+    font-size: 14px
+    line-height: 21px
+    primary-font($normal)
+
+  div.healcode
+
+    div.list_view li
+      border: 0
+      padding-top: 0
+
+    .class_list
+
+      h1.class_name
+        font-size: 1.8em
+        letter-spacing: 2px
+        primary-font($semibold)
+        text-transform: uppercase
+
+      .class_description
+        font-size: 14px
+        letter-spacing: -.23px
+        line-height: 21px
+        primary-font($normal)
+
+        div span
+          font-size: 14px!important
+          letter-spacing: -.2px
+
+      .class_offered_link
+        border-radius: 0
+        box-shadow: none
+        button(100%)
+
+        a
+          color: $white
+          font-weight: inherit
+
+      .class_show
+        margin: 0 0 10px
+
+    div.hc_footer
+      display: none!important
+
+span.icon-glove
+  font-size: 2em
+  left: 0
+  line-height: 80px
+  position: absolute
+  top: 0

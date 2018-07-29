@@ -1,0 +1,25 @@
+
+.background-overlay
+  background: rgba($white, .6)
+  border-top: 4px solid $red
+  bottom: 0
+  height: 100%
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+  width: 100%
+  z-index: 0
+
+  &.video, &.home
+    background: url('../_images/burned.png') no-repeat center center transparent
+
+video
+  background-size: cover
+  height: 110%
+  left: 50%
+  position: fixed
+  top: 48.5%
+  transform: translateX(-50%) translateY(-50%)
+  width: auto
+  z-index: -1

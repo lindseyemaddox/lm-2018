@@ -1,0 +1,1 @@
+function initVars(){$showTestimonials=$("div.copyline"),$testimonials=$("footer .testimonials")}function showTestimonials(){$showTestimonials.click(function(){return $testimonials.toggleClass("visible"),!1})}function firstLoad(){initVars(),showTestimonials()}var $showTestimonials,$testimonials;$(function(){firstLoad()});

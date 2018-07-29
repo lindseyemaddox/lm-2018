@@ -1,0 +1,128 @@
+#warp 
+    width: 100%;
+    max-width: 1000px
+    background: transparent
+    margin: 0 auto
+
+ul#gallery-container 
+    position: relative
+    width: 100%
+    max-width: 1000px
+    height: auto
+    padding: 52% 0 10px
+    margin: 0
+    text-align: center
+    display: block
+
+li.gallery-item 
+    display: inline-block
+    width: 19.5%
+    cursor:pointer
+    height: 10vw
+    background-color: rgba($black, .3)
+    position: relative
+
+.gallery-preview
+    margin: 0
+    padding: 10% 15%
+    position: relative
+    top: 0
+    width: 100%
+    height: auto
+    border-radius: 3px
+    overflow: hidden
+    transition: all 0.3s ease-out .2s
+
+    p
+      text-align: left
+      primary-font(light)
+      font-size: 0.75em
+      line-height: 1.6em
+      color: $white
+      padding-bottom: 5px
+
+      &.author
+        text-align: right
+
+ul#gallery-container:hover li .gallery-preview
+    opacity: 0.5
+
+ul#gallery-container:hover li:hover .gallery-preview
+    opacity: 1
+
+input.gallery-selector:checked ~ label.gallery-label>.gallery-preview,
+ul#gallery-container:hover li:hover .gallery-preview:hover
+    z-index: 5
+    transform: scale(1.15)
+    transform-origin: middle center
+    transition: all 0.3s ease-out
+
+ul#gallery-container:hover li:hover .gallery-preview:hover 
+    //z-index: 20
+
+input.gallery-selector:checked ~ label.gallery-label>.gallery-preview
+    background: transparent
+
+label.gallery-label:after
+    content: " "
+    position: absolute
+    width: 0
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-top: 12px solid rgba($black, .3)
+    bottom: -12px
+    left: 25%
+
+.gallery-fullsize 
+    position: absolute
+    bottom: -50%
+    left: -50%
+    display: block
+    width: 200%
+    padding: 20px 10%
+    height: 200%
+    opacity: 0
+    color: $white
+    transform: scale(0.25)
+    transform-origin: bottom center
+    transition: all 0.3s ease-out
+    primary-font(light)
+    background-color: rgba($green, .9)
+
+    &:after
+      content: " "
+      position: absolute
+      width: 0
+      height: 0
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+      border-top: 12px solid rgba($green, .9)
+      bottom: -12px
+      left: 37%
+
+ul#gallery-container:hover li.gallery-item:active .gallery-fullsize
+    z-index: 50
+    opacity: 0.75
+    border-radius: 10%
+    transform-origin: bottom center
+    transition: all 0.3s ease-out .2s
+
+ul#gallery-container:hover li:hover input.gallery-selector:checked ~ .gallery-fullsize
+    z-index: 10
+    opacity: 1
+    border-radius: 0
+
+input.gallery-selector:checked ~ .gallery-fullsize 
+    display: block
+    opacity: 1
+    z-index: 10
+    transform: scale(1)
+    transform-origin: middle center
+    transition: all .2s ease-in .3s
+
+input.gallery-selector 
+    display: none
+
+label.gallery-label 
+    cursor: pointer

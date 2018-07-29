@@ -1,0 +1,271 @@
+
+nav-icon-view()
+
+  .nav-items
+
+    a
+      cursor: pointer
+      text-decoration: none
+      transition: color 200ms ease
+
+      .list-item
+        opacity: 0
+        display: block
+
+      span
+        display: none
+
+    .sub
+      font-size: 1.5em
+      transition: height 200ms ease
+      overflow: hidden
+      padding-left: 29px
+      height: 0
+
+  [class^="list"] label
+    display: none
+
+.nav-pane .nav-items
+  height: 100%
+  letter-spacing: 4px
+  margin: 10px auto 0
+  position: relative
+
+  .sub.phones
+    padding-left: 50px
+
+    a
+      font-size: 0.88em
+      height: auto
+      text-decoration: none
+      color: $black
+      padding-bottom: 20px
+      text-transform: uppercase
+      primary-font($light)
+
+  a
+    text-align: center
+    font-size: 5em
+    // height: 63px
+    padding-left: 20px
+
+    &:before
+      font-size: 0.5em
+
+    &:not(.sub), &:not(.sub a)
+      margin-bottom: 10px
+      position: relative
+
+      span
+        position: absolute
+        top: 1em
+        left: 80px
+
+    &:before
+      vertical-align: middle
+
+    .list-item
+      font-size: 0.35em
+      vertical-align: middle
+      height: 0
+      padding-left: 0.35em
+      text-transform: uppercase
+      primary-font($light)
+      line-height: 1em
+
+    &.sub
+      font-size: 2em
+      margin-left: 0.65em
+      cursor: pointer
+
+      span
+        padding-left: .75em
+        font-size: .475em
+
+[class^="list"]
+  position: absolute
+
+  input.droppers
+    position: absolute
+    left:-99999px
+    top: -99999px
+
+  label
+    position: absolute
+    cursor: pointer
+    z-index: 1
+    width: 40px
+    right: 15px
+    top: 0
+    padding-left: 0
+    height: 40px
+
+.nav-pane
+  transition: 250ms
+  position: fixed
+  transform: translateX(0px)
+  top: 0
+  height: 100vh
+  width: 75px
+  // overflow: hidden
+  nav-icon-view()
+
+  &.home
+    background-color: transparent
+
+    .nav-items a
+
+      label:hover .dropdown span.bar
+        background: $green
+
+      &:hover:before
+        color: $green
+        transition: color 400ms ease
+
+      &:before
+        color: $red
+
+      span
+        color: $white
+
+      .dropdown span.bar
+        background: $white
+
+  &.open
+    transform: translateX(-286px)
+    transition: 250ms
+    width: 360px
+    background-color: rgba($black, 0.9)
+    box-shadow: 0px 3px 10px rgba($black, 0.2)
+    nav-list-view()
+
+.nav-pane.open .nav-items .listthree
+  .socials
+    height: 0
+    margin: 60px 0 0 34px
+    overflow: hidden
+
+    a[class^="icon-"]
+      display: inline
+      font-size: 2.6em
+      line-height: 1em
+      text-decoration: none
+      width: auto
+      padding: 0 9px 0 0
+      color: $green
+
+  [class^="icon-"]:not(.icon-contact)
+    color: $white
+    font-size: 2em
+    padding-right: 9px
+
+.toggle-nav
+  cursor: pointer
+  text-align: center
+  primary-font($primary-font-light)
+  position: absolute
+  width: 100%
+  margin-bottom: 50px
+
+  span.m
+    margin-left: 10px
+    display: inline-block
+    font-size: 0.75rem
+    opacity: 0
+    transition: 250ms
+    letter-spacing: 1px
+    vertical-align: middle
+
+  span.e
+    display: inline-block
+    height: 14px
+    width: 20px
+    vertical-align: middle
+    margin: 0 2px
+
+    &.btn-close
+      span.bar:nth-child(1)
+        transition: 250ms
+        transform: rotate(45deg)
+        top: 6px
+      span.bar:nth-child(2)
+        opacity: 0
+        transition: 250ms
+      span.bar:nth-child(3)
+        transition: 250ms
+        transform: rotate(-45deg)
+        bottom: 6px
+
+    span.bar
+      transition: 250ms
+      position: relative
+      display: block
+      background: $white
+      border-radius: 1px
+      border-bottom: 1.8px solid lighten($white, 25%)
+      width: 20px
+      height: 2.5px
+
+      &:nth-child(2)
+        margin: 3.6px 0
+
+  &:hover
+    span.m, span.n, span.u
+      opacity: 1
+      transition: 250ms
+      color: $green
+    span.e span.bar
+      background-color: $green
+      border-bottom-color: $green
+
+input:checked ~ [class^="icon"]
+
+  span.bar:nth-child(1)
+    transition: 250ms
+    transform: rotate(45deg)
+    transform-origin: center center
+    margin: 0px 1px 21.5px 20px
+
+  span.bar:nth-child(2)
+    transition: 250ms
+    transform: rotate(-45deg)
+    transform-origin: center center
+    margin: 0px 0px 21px -2px
+
+.dropdown
+
+  span.bar
+    transition: 250ms
+    display: inline-block
+    background: $green
+    height: 20px
+    width: 1px
+
+  span.bar:nth-child(1)
+    transition: 250ms
+    transform: rotate(-40deg)
+    transform-origin: center center
+    margin: 0 14px 21.5px 14px
+
+  span.bar:nth-child(2)
+    transition: 250ms
+    transform: rotate(40deg)
+    transform-origin: center center
+    margin: 0px 0px 21.5px -2px
+
+.listtwo
+  top: 60px
+
+.listthree
+  bottom: 140px
+
+.listfour
+  bottom: 80px
+
+.listfive
+  bottom: 20px
+
+.nav-pane .nav-items
+  .sub.form,
+  .sub.phones
+    display: none

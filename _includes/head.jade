@@ -1,0 +1,50 @@
+
+doctype html
+html(lang=locale)
+  head
+    block meta
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title Knockout Fitness Nashville
+      meta(name='description' content='')
+
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png?v=XBzeANJ2O4")
+    link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png?v=XBzeANJ2O4")
+    link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png?v=XBzeANJ2O4")
+    link(rel="manifest", href="/site.webmanifest?v=XBzeANJ2O4")
+    link(rel="mask-icon", href="/safari-pinned-tab.svg?v=XBzeANJ2O4", color="#d9001d")
+    link(rel="shortcut icon", href="/favicon.ico?v=XBzeANJ2O4")
+    meta(name="msapplication-TileColor", content="#3db779")
+    meta(name="theme-color", content="#ffffff")
+
+    //- open graph
+    meta(property='og:title' content='Nashville\'s Most Authentic Boxing Gym')
+    meta(property='og:url' content='http://knockoutfitness.net/')
+    meta(property='og:image' content='http://knockoutfitness.net/_images/knockout-fitness_og.jpg')
+    meta(property='og:site_name' content='Knockout Fitness Nashville')
+    meta(property='og:description' content='At Knockout Fitness, you will train with professional heavyweight boxer and USA boxing coach, Frank Wood. His regulation-sized boxing ring has been the proving ground for hundreds of clients and professional fighters alike.')
+
+    block styles
+      link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700')
+      link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/flexslider.min.css')
+      link(rel='stylesheet' type='text/css' href='_styles/compiled.css')
+
+    block scripts
+      script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js')
+      script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+      script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js')
+      script(type='text/javascript' src='_scripts/min/nav-min.js')
+      script(type='text/javascript' src='_scripts/min/main-min.js')
+      script(type='text/javascript' src='_scripts/min/html5ext-min.js')
+      
+      script(type='text/javascript').
+        $(document).ready(function() {
+          $('.fancybox').fancybox();
+        });
+
+      script(async src='https://www.googletagmanager.com/gtag/js?id=UA-113460726-1')
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-113460726-1');

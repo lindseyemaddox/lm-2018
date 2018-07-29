@@ -1,0 +1,31 @@
+
+.wrapper
+  margin: 0 auto
+  max-width: $layout-max-width
+
+.layout
+  background-color: rgba($white .67)
+
+  &.home
+    background-color: transparent
+
+  .main
+    width: 100%
+    z-index: 0
+
+    .grid
+      height: 100vh
+      margin: 0 auto
+      padding: $sidebar-vertical-padding 0 150px
+
+  .sidebar
+    bottom: 0
+    padding: $sidebar-vertical-padding 0
+    position: absolute
+    right: 0
+    top: 0
+    width: $sidebar-collapsed-width
+    z-index: 99
+
+  &--collapsed
+    animation: layout-slide 400ms 100ms forwards
