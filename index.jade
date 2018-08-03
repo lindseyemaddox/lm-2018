@@ -1,53 +1,20 @@
 
-extends layout
+include _includes/head
 
-block content
+  body
 
-block sidebar
+    include _includes/video
 
-  .nav-pane.slide-out.home
+    .wrapper
 
-    .nav-items
+      .layout.home
 
-      .listone
-        input(type="checkbox" id="listone" class='droppers')
+        .main
 
-        a.icon-private(href="#s2")
-          span.list-item Schedule Personal Training
-            
-      .listtwo
-        input(type="checkbox" id="listtwo" class='droppers')
+          section.grid
+          
+            include _includes/slides
 
-        a.icon-group
-          span.list-item Schedule Group Classes
-            
-      .listthree
-        input(type="checkbox" id="listthree" class='droppers')
+        aside.sidebar
 
-        a.icon-contact
-          span.list-item Contact Us
-
-        .sub.phones
-          a(href='tel:16152551359')
-            span (615) 255-1359
-            
-          a.fancybox(class='fancybox.iframe' href='file:///Users/lindsey/git/angry-eagle-2017/_includes/overlays/map.html')
-            span.map Pedro Bay, Alaska
-              span View Map
-
-        .sub.copyline
-
-          h1 &copy;#{new Date().getFullYear()} Knockout Fitness
-
-      .listfour
-        input(type="checkbox" id="listfour" class='droppers')
-
-        a.icon-facebook
-          span.list-item Facebook Feed
-            
-      .listfive
-        input(type="checkbox" id="listfive" class='droppers')
-
-        a.icon-mindbody
-          span.list-item Download Our App
-            
+          include _includes/sidebar
