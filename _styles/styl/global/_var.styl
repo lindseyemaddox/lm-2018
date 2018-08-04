@@ -5,22 +5,25 @@ $white = #d3cbbd
 $black = #1c1919
 $grey = #403d3c
 
-$font-path ?= "/Users/lindseymaddox/src/knockout-fitness/_fonts/"
-
-$icon-arrow = "\e900"
-$icon-contact = "\e901"
-$icon-facebook = "\e902"
-$icon-glove = "\e903"
-$icon-group = "\e904"
-$icon-heart = "\e905"
-$icon-mindbody = "\e906"
-$icon-private = "\e907"
-$icon-weight = "\e908"
-
-$icon-width = 24px
-
 $sidebar-collapsed-width = 75px
 $sidebar-width = 280px
 $sidebar-vertical-padding = 35px
 
 $layout-max-width = 1000px
+
+
+$primary-font = 'Quicksand'
+$performance-font = 'Helvetica', 'Arial', sans-serif
+$primary-font-size = 16px
+$primary-font-line-height = 1.5em
+$light = 300
+$regular = 500
+$bold = 700
+
+primary-font(w)
+  font-family: $primary-font, $performance-font
+  font-weight: w
+  line-height: $primary-font-line-height
+
+html
+  font-size: $primary-font-size

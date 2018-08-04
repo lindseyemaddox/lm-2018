@@ -39,13 +39,35 @@
     button(300px)
 
 .logo
-  margin: 10vh 0 0
-  width: 45%
+  left: 0
+  margin: 3vh 0 0
+  position: absolute
+  width: 38%
+
+.tag
+  float: right
+  margin-left: 1vw
+  padding-bottom: 65px
 
 .snipe
   width: 180px
 
+.s1
+  padding-left: 360px
 
+  &:before
+    line-top()
+    content: ''
+
+  &:after
+    line-bottom()
+    clear: right
+    content: ''
+
+  .button
+    clear: right
+    float: right
+    margin-right: 1vw
 
 .s2
 

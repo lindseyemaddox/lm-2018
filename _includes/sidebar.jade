@@ -1,49 +1,117 @@
 
-block sidebar
-
+aside.sidebar
+  
   .nav-pane.slide-out.home
 
     .nav-items
 
       .listone
+      
         input(type="checkbox" id="listone" class='droppers')
 
-        a.icon-private(href="#s2")
-          span.list-item Schedule Personal Training
-            
+        a.icon-compass
+          span.list-item The Adventure
+            span of a Lifetime
+
+          label(for="listone")
+            .dropdown
+              span.bar
+              span.bar
+
+        a.sub(href='/sportfishing.html')
+          span.list-item Sportfishing
+
+        a.sub(href='/recreation.html')
+          span.list-item Recreation
+
+        a.sub.fancybox(class='fancybox.iframe' href='/_includes/overlays/itinerary.html')
+          span.list-item Sample Itinerary
+
+        a.sub(href='/travel.html')
+          span.list-item Travel &amp; Packing
+
+        a.sub(href='/equipment.html')
+          span.list-item Fishing Equipment
+
+        a.sub(href='/events.html')
+          span.list-item Weddings &amp; Events
+
+        a.sub.fancybox(class='fancybox.iframe' href='/_includes/overlays/testimonials.html')
+          span.list-item Testimonials
+
+        a.sub.fancybox(class='fancybox.iframe' href='/_includes/overlays/rates.html')
+          span.list-item Rates
+
+        a.sub.fancybox(class='fancybox.iframe' href='/_includes/overlays/faq.html')
+          span.list-item Frequent Questions
+
       .listtwo
+      
         input(type="checkbox" id="listtwo" class='droppers')
 
-        a.icon-group
-          span.list-item Schedule Group Classes
-            
+        a.icon-boots
+          span.list-item All That's
+            span Missing Is You
+
+          label(for="listtwo")
+            .dropdown
+              span.bar
+              span.bar
+
+        a.sub(href='/lodges.html')
+          span.list-item Lodges
+
+        a.sub(href='/fleet.html')
+          span.list-item Fleet
+
+        a.sub(href='/team.html')
+          span.list-item Team
+
+        a.sub(href='/gallery.html')
+          span.list-item Galleries
+
+        a.sub(href='/careers.html')
+          span.list-item Careers
+
       .listthree
+      
         input(type="checkbox" id="listthree" class='droppers')
 
         a.icon-contact
-          span.list-item Contact Us
+          span.list-item Connect With
+            span Angry Eagle
+
+          label(for="listthree")
+            .dropdown
+              span.bar
+              span.bar
 
         .sub.phones
-          a(href='tel:16152551359')
-            span (615) 255-1359
+        
+          a(href='tel:19078504153')
+            span (907) 850-4153
             
-          a.fancybox(class='fancybox.iframe' href='file:///Users/lindsey/git/angry-eagle-2017/_includes/overlays/map.html')
+          a.fancybox(class='fancybox.iframe' href='/_includes/overlays/map.html')
             span.map Pedro Bay, Alaska
               span View Map
 
-        .sub.copyline
+        .sub.socials
+          a.icon-google(href='https://plus.google.com/102073266521304104835/about' target='_blank')
+          a.icon-twitter(href='https://twitter.com/AngryEagleLodge' target='_blank')
+          a.icon-facebook(href='https://www.facebook.com/pages/Rainbow-Bay-Resort/110232285696450' target='_blank')
+          a.icon-youtube(href='https://www.youtube.com/channel/UCI8aOUNen1dcVNMCliUwqCA' target='_blank')
+          a.icon-instagram(href='https://instagram.com/angryeaglelodge/' target='_blank')
 
-          h1 &copy;#{new Date().getFullYear()} Knockout Fitness
+    .copyline
+    
+      h1 &copy;2017 Rainbow Bay, LLC &#9702; Nashville, TN, USA
 
-      .listfour
-        input(type="checkbox" id="listfour" class='droppers')
-
-        a.icon-facebook
-          span.list-item Facebook Feed
-            
-      .listfive
-        input(type="checkbox" id="listfive" class='droppers')
-
-        a.icon-mindbody
-          span.list-item Download Our App
-            
+  .toggle-nav
+  
+    span.m M
+    span.e
+      span.bar
+      span.bar
+      span.bar
+    span.n N
+    span.u U
