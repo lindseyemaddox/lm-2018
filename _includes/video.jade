@@ -1,15 +1,12 @@
 
-.background-overlay.video
-
 .easyhtml5video
-  video(property='video' autoplay='autoplay' poster='_includes/video/walking.jpg' title='background' loop='loop' onended='var v=this;setTimeout(function(){v.play()},300)')
-    source(src='_includes/video/walking.m4v' type='video/mp4')
-    source(src='_includes/video/walking.webm' type='video/webm')
-    source(src='_includes/video/walking.mp4')
+  video(property='video' autoplay='autoplay' title='background' loop='loop' onended='var v=this;setTimeout(function(){v.play()},300)')
+    source(src='_includes/video/black.m4v' type='video/mp4')
+    source(src='_includes/video/black.webm' type='video/webm')
+    source(src='_includes/video/black.mp4')
     
-    object(type='application/x-shockwave-flash' data='_includes/video/flashfox.swf' width='2560' height='1440' style='position:relative;') |
-      <param name='movie' value='_includes/video/flashfox.swf' />
-      <param name='allowFullScreen' value='true' />
-      <param name='flashVars' value='autoplay=true&controls=false&fullScreenEnabled=false&posterOnEnd=true&loop=true&poster=background.files/walking.jpg&src=walking.m4v' />
-      <embed src='_includes/video/flashfox.swf' width='2560' height='1440' style='position:relative;'  flashVars='autoplay=true&controls=false&fullScreenEnabled=false&posterOnEnd=true&loop=true&poster=_images/video/walking.jpg&src=walking.m4v'	allowFullScreen='true' wmode='transparent' type='application/x-shockwave-flash' pluginspage='http://www.adobe.com/go/getflashplayer_en' />
-      img(alt='background' src='_includes/video/walking.jpg' style='position:absolute;left:0;' width='100%' title='Video playback is not supported by your browser')
+    object(type='application/x-shockwave-flash' data='_includes/video/flashfox.swf' width='3840' height='2160' style='position:relative;') |
+      param(name='movie' value='_includes/video/flashfox.swf')
+      param(name='allowFullScreen' value='true')
+      param(name='flashVars' value='autoplay=true&controls=false&fullScreenEnabled=false&posterOnEnd=true&loop=true&poster=background.files/black.jpg&src=black.m4v')
+      embed(src='_includes/video/flashfox.swf' width='3840' height='2160' style='position:relative;' flashVars='autoplay=true&controls=false&fullScreenEnabled=false&posterOnEnd=true&loop=true&poster=_images/video/black.jpg&src=black.m4v' allowFullScreen='true' wmode='transparent' type='application/x-shockwave-flash' pluginspage='http://www.adobe.com/go/getflashplayer_en')
