@@ -5,10 +5,14 @@
   position: relative
 
 .slider
+  color: $white
   font-size: 0
   height: 100%
-  transition: 0.8s
+  transition: .8s
   white-space: nowrap
+
+  .button
+    button(300px)
 
 .slider > *
   background: none 50% no-repeat
@@ -29,15 +33,6 @@
 #s3:target ~ .slider
   transform: translateX(-200%)
 
-#s4:target ~ .slider
-  transform: translateX(-300%)
-
-.slider
-  color: $white
-
-  .button
-    button(300px)
-
 .logo
   left: 0
   margin: 3vh 0 0
@@ -53,16 +48,17 @@
   width: 180px
 
 .s1
+  lines()
   padding-left: 360px
 
-  &:before
-    line-top()
-    content: ''
+  .tag
+    font-size: 1.75em
+    line-height: 1.28em
+    primary-font($light)
+    text-transform: uppercase
 
-  &:after
-    line-bottom()
-    clear: right
-    content: ''
+    span
+      primary-font($bold)
 
   .button
     clear: right
@@ -70,154 +66,88 @@
     margin-right: 1vw
 
 .s2
+  lines()
+  padding-right: 420px
 
-  h2
+  .testie
     font-size: 1.5em
     letter-spacing: 1px
     line-height: 1.2em
-    margin-top: 5em
+    margin: 5em 1vw 0
     padding-bottom: 30px
     primary-font($bold)
-    text-transform: uppercase
 
-  h3
-    font-size: 1.375em
-    letter-spacing: 3px
-    padding: 16px 0 10px 90px
-    primary-font($bold)
-    line-height: 1.3em
-    text-transform: uppercase
+    span
+      font-style: italic
+      text-transform: uppercase
 
-  h4
-    font-size: 0.9375em
-    line-height: 1.4666666666666666em
-    primary-font($semibold)
-
-  [class^="icon-"]
-    font-size: 3.5em
-    left: 0
-    line-height: 80px
-    position: absolute
-    top: 0
-
-  span.icon-weight
-    font-size: 4.5em
-    padding-top: 3px
-
-  span.icon-heart
-    font-size: 4em
-    padding-top: 3px
-
-  .cell.three
-    width: 25%
-
-    &.first
-      width: 36%
-
-      h3
-        padding-left: 70px
-
-    &.last
-      width: 29%
-
-      h3
-        padding-left: 77px
-
-  p
-    font-size: 13.5px
-
-.s3
-
-  .snipe
-    display: block
-
-  h5
-    font-size: 1.8125em
+  .author
     letter-spacing: 2px
-    line-height: 1.2413793103448276em
-    margin: 17px 0 24px 42px
+    line-height: 1.8em
+    margin: 0 1vw
     primary-font($light)
-    text-transform: uppercase
+    text-align: right
 
-  h6
-    display: inline-block
-    font-size: 1.275em
-    letter-spacing: 4px
-    line-height: 1.2727272727272727em
-    primary-font($semibold)
-    text-transform: uppercase
-    vertical-align: middle
-
-.cell
-  display: inline-block
-  position: relative
-  vertical-align: top
-
-  &.three
-    margin-right: 4.5%
-    width: 30%
-
-    &.last
-      margin-right: 0
+  .woo
+    margin: 7vh 0 0
+    position: absolute
+    right: -102%
+    width: 44%
 
   .button
-    width: 100%
+    float: right
+    margin: 80px 1vw 0 0
 
-  &.two
-    margin: 2em 8% 0 0
-    width: 33%
+.s3
+  lines()
+  padding: 0 5vw
+  position: relative
 
-    &.last
-      margin-right: 0
-      width: 58%
+  &:before
+    margin-top: 20vh
 
-  p
-    font-size: 14px
-    line-height: 21px
-    primary-font($normal)
+  .snipe
+    left: 1vw
+    margin-left: 5.5vw
+    position: absolute
+    top: 25vh
+    width: 27.5px
 
-  div.healcode
+  .folio
+    font-size: 2.25em
+    letter-spacing: 2px
+    margin: 17px 0 24px 5vw
+    primary-font($regular)
+    line-height: 1.3em
 
-    div.list_view li
-      border: 0
-      padding-top: 0
+  .proof
+    font-size: 1em
+    letter-spacing: 1px
+    margin: 0 1vw 0 5vw
+    primary-font($light)
 
-    .class_list
+  .button
+    float: right
+    margin: 40px 1vw 0 0
 
-      h1.class_name
-        font-size: 1.8em
-        letter-spacing: 2px
-        primary-font($semibold)
-        text-transform: uppercase
+  .boxes
+    position: absolute
+    right: 50%
+    top: 65vh
 
-      .class_description
-        font-size: 14px
-        letter-spacing: -.23px
-        line-height: 21px
-        primary-font($normal)
+  .type
+    font-size: 1.2em
+    primary-font($bold)
+    text-transform: uppercase
 
-        div span
-          font-size: 14px!important
-          letter-spacing: -.2px
+  .box
+    display: inline-block
+    width: 100px
 
-      .class_offered_link
-        border-radius: 0
-        box-shadow: none
-        button(100%)
+    img
+      filter: grayscale(100%)
+      transition: filter 900ms ease
+      width: 100%
 
-        a
-          color: $white
-          font-weight: inherit
-
-      .class_show
-        margin: 0 0 10px
-
-    div.hc_footer
-      display: none!important
-
-span.icon-glove
-  font-size: 2em
-  left: 0
-  line-height: 80px
-  position: absolute
-  top: 0
+      &:hover
+        filter: none
