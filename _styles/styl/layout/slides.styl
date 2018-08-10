@@ -100,7 +100,7 @@
 
 .s3
   lines()
-  padding: 0 10vw
+  padding: 0 7.5vw
   position: relative
 
   &:before
@@ -108,7 +108,7 @@
 
   .snipe
     left: 1vw
-    margin-left: 10.5vw
+    margin-left: 7.5vw
     position: absolute
     top: 15vh
     width: 27.5px
@@ -116,7 +116,7 @@
   .folio
     font-size: 1.75em
     letter-spacing: 1.2px
-    margin: 17px 0 9px 5vw
+    margin: 17px 1vw 9px 4vw
     primary-font($regular)
     line-height: 1.3em
 
@@ -136,14 +136,13 @@
     padding: 0 10vw
     position: absolute
     right: 0
-    top: 51vh
+    top: 47vh
     width: 100%
 
     &.bottom
       top: 64vh
 
-    &:after
-      content: '\e907'
+    .flex.next
       font-family: 'icons'
       font-size: 26px
       position: absolute
@@ -180,3 +179,7 @@
       &:hover
         filter: none
         opacity: 1
+
+.flexslider
+  background: transparent
+  border: none

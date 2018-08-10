@@ -1312,77 +1312,6 @@ video {
   width: auto;
   z-index: -1;
 }
-.testimonials {
-  position: absolute;
-  width: 92%;
-  margin-left: 8%;
-  bottom: 7em;
-  transition: opacity 400ms ease-in;
-}
-.testimonials .testimonial {
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: $normal;
-  line-height: 1.5em;
-  background-color: rgba(101,99,89,0.4);
-  width: 25em;
-  color: #e2e5ea;
-  font-size: 0.625em;
-  border-radius: 20px;
-  padding: 20px 10px 10px 20px;
-  position: relative;
-  display: inline-block;
-  margin-right: 3em;
-  opacity: 0.8;
-}
-.testimonials .testimonial:after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 30px 4em 0px 4em;
-  border-color: rgba(101,99,89,0.4) transparent transparent transparent;
-  position: absolute;
-  left: 8.5em;
-  bottom: -3em;
-}
-.testimonials .testimonial p.author {
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  line-height: 3em;
-  letter-spacing: 0.25em;
-  text-align: right;
-}
-.testimonials.visible {
-  opacity: 1;
-}
-footer {
-  position: relative;
-}
-.copyline {
-  position: absolute;
-  width: 100%;
-  bottom: 1.5em;
-}
-.copyline h1 {
-  color: rgba(226,229,234,0.5);
-  font-size: 0.7em;
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: $semibold;
-  line-height: 1.5em;
-  text-align: center;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-}
-.copyline h1 .icon-badge {
-  font-size: 6em;
-  line-height: 0.5em;
-  margin: 0 -0.05em 0 -0.45em;
-  display: inline-block;
-  vertical-align: bottom;
-}
 h2.headline {
   color: #e2e5ea;
   font-size: 2.8125em;
@@ -1402,113 +1331,6 @@ h2.headline a {
 h2.headline a:hover {
   border-bottom-width: 2px;
   color: #3db779;
-}
-.overlay {
-  color: #e2e5ea;
-  padding: 60px 37px;
-}
-.overlay .headline {
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: $semibold;
-  line-height: 1.5em;
-  font-size: 2.25em;
-  line-height: 1em;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  white-space: nowrap;
-}
-.overlay .headline span {
-  vertical-align: middle;
-}
-.overlay .subhead {
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: $semibold;
-  line-height: 1.5em;
-  font-size: 1.625em;
-  letter-spacing: 4px;
-  margin-top: 55px;
-  text-transform: uppercase;
-}
-.overlay .section-head {
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: $semibold;
-  line-height: 1.5em;
-  font-size: 1.275em;
-  line-height: 1.186046511627907em;
-  letter-spacing: 3px;
-  margin: 22px 0 16px;
-  text-transform: uppercase;
-}
-.overlay p {
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: 500;
-  line-height: 1.5em;
-  font-size: 1em;
-  line-height: 1.454545454545455em;
-  padding-bottom: 20px;
-}
-.overlay .heading {
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-  font-size: 1em;
-  line-height: 1.454545454545455em;
-  padding-bottom: 0;
-}
-.overlay .italic {
-  font-style: italic;
-}
-.overlay .button {
-  background-color: #3db779;
-  border: 1px solid #3db779;
-  color: #e2e5ea;
-  display: block;
-  font-size: 13px;
-  letter-spacing: 2px;
-  margin-top: 15px;
-  max-width: 260px;
-  outline: 0;
-  padding: 1.2em 0;
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: 700;
-  line-height: 1.5em;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all ease 400ms;
-  width: 300px;
-  float: none;
-  margin: 25px auto 0;
-}
-.overlay .button:after {
-  content: '\e907';
-  font-family: 'icons';
-  font-size: 14px;
-  padding-left: 10px;
-  vertical-align: bottom;
-}
-.overlay .button:hover {
-  background-color: transparent;
-  border: 1px solid #e2e5ea;
-  cursor: pointer;
-}
-.overlay.rates .subhead,
-.overlay.rates .section-head,
-.overlay.rates .heading,
-.overlay.rates p {
-  text-align: center;
-}
-.overlay.rates .section-head {
-  padding-bottom: 0;
-}
-.overlay.rates p {
-  padding-bottom: 5px;
-}
-.overlay.map .button {
-  margin-top: -100px;
-}
-.overlay.map img {
-  width: 100%;
 }
 .slides {
   height: 100% /* Or set a fixed height */;
@@ -1687,7 +1509,7 @@ h2.headline a:hover {
   margin: 80px 1vw 0 0;
 }
 .s3 {
-  padding: 0 10vw;
+  padding: 0 7.5vw;
   position: relative;
 }
 .s3:before {
@@ -1716,7 +1538,7 @@ h2.headline a:hover {
 }
 .s3 .snipe {
   left: 1vw;
-  margin-left: 10.5vw;
+  margin-left: 7.5vw;
   position: absolute;
   top: 15vh;
   width: 27.5px;
@@ -1724,7 +1546,7 @@ h2.headline a:hover {
 .s3 .folio {
   font-size: 1.75em;
   letter-spacing: 1.2px;
-  margin: 17px 0 9px 5vw;
+  margin: 17px 1vw 9px 4vw;
   font-family: 'Quicksand', 'Arial', sans-serif;
   font-weight: 500;
   line-height: 1.5em;
@@ -1748,14 +1570,13 @@ h2.headline a:hover {
   padding: 0 10vw;
   position: absolute;
   right: 0;
-  top: 51vh;
+  top: 47vh;
   width: 100%;
 }
 .s3 .boxes.bottom {
   top: 64vh;
 }
-.s3 .boxes:after {
-  content: '\e907';
+.s3 .boxes .flex.next {
   font-family: 'icons';
   font-size: 26px;
   position: absolute;
@@ -1795,11 +1616,9 @@ h2.headline a:hover {
   filter: none;
   opacity: 1;
 }
-.icon-logo-full-outline {
-  font-size: 3.25em;
-}
-.icon-logo-full-outline [class^="path"]:before {
-  color: #1c1919;
+.flexslider {
+  background: transparent;
+  border: none;
 }
 #warp {
   width: 100%;
