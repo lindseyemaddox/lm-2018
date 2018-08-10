@@ -1787,11 +1787,13 @@ h2.headline a:hover {
 }
 .s3 .box img {
   filter: grayscale(100%);
-  transition: filter 900ms ease;
+  opacity: 0.5;
+  transition: all 900ms ease;
   width: 100%;
 }
 .s3 .box img:hover {
   filter: none;
+  opacity: 1;
 }
 .icon-logo-full-outline {
   font-size: 3.25em;
