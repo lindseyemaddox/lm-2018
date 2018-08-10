@@ -100,48 +100,75 @@
 
 .s3
   lines()
-  padding: 0 5vw
+  padding: 0 10vw
   position: relative
 
   &:before
-    margin-top: 20vh
+    margin-top: 12vh
 
   .snipe
     left: 1vw
-    margin-left: 5.5vw
+    margin-left: 10.5vw
     position: absolute
-    top: 25vh
+    top: 15vh
     width: 27.5px
 
   .folio
-    font-size: 2.25em
-    letter-spacing: 2px
-    margin: 17px 0 24px 5vw
+    font-size: 1.75em
+    letter-spacing: 1.2px
+    margin: 17px 0 9px 5vw
     primary-font($regular)
     line-height: 1.3em
 
   .proof
-    font-size: 1em
+    font-size: .875em
     letter-spacing: 1px
-    margin: 0 1vw 0 5vw
+    margin: 0 1vw
     primary-font($light)
 
   .button
     float: right
-    margin: 40px 1vw 0 0
+    margin: 30px 1vw 0 0
 
   .boxes
+    height: 100px
+    overflow: hidden
+    padding: 0 10vw
     position: absolute
-    right: 50%
-    top: 65vh
+    right: 0
+    top: 51vh
+    width: 100%
+
+    &.bottom
+      top: 64vh
+
+    &:after
+      content: '\e907'
+      font-family: 'icons'
+      font-size: 26px
+      position: absolute
+      right: 110px
+      top: 38px
+      transition: color 800ms ease
+      vertical-align: middle
+
+    &:hover:after
+      color: $green
 
   .type
+    float: left
     font-size: 1.2em
-    primary-font($bold)
+    letter-spacing: 3px
+    primary-font($light)
+    line-height: 100px
+    text-align: right
     text-transform: uppercase
+    width: 25%
 
   .box
     display: inline-block
+    float: right
+    margin: 0 1vw
     width: 100px
 
     img

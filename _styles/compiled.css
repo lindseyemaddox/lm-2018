@@ -911,7 +911,7 @@ form.nav_contact input {
 }
 form.nav_contact input[type='button'] {
   background-color: #3db779;
-  border: 0;
+  border: 1px solid #3db779;
   color: #e2e5ea;
   display: block;
   font-size: 13px;
@@ -938,7 +938,8 @@ form.nav_contact input[type='button']:after {
   vertical-align: bottom;
 }
 form.nav_contact input[type='button']:hover {
-  background-color: $orange;
+  background-color: transparent;
+  border: 1px solid #e2e5ea;
   cursor: pointer;
 }
 .nav-pane .nav-items {
@@ -1459,7 +1460,7 @@ h2.headline a:hover {
 }
 .overlay .button {
   background-color: #3db779;
-  border: 0;
+  border: 1px solid #3db779;
   color: #e2e5ea;
   display: block;
   font-size: 13px;
@@ -1487,7 +1488,8 @@ h2.headline a:hover {
   vertical-align: bottom;
 }
 .overlay .button:hover {
-  background-color: $orange;
+  background-color: transparent;
+  border: 1px solid #e2e5ea;
   cursor: pointer;
 }
 .overlay.rates .subhead,
@@ -1522,7 +1524,7 @@ h2.headline a:hover {
 }
 .slider .button {
   background-color: #3db779;
-  border: 0;
+  border: 1px solid #3db779;
   color: #e2e5ea;
   display: block;
   font-size: 13px;
@@ -1548,7 +1550,8 @@ h2.headline a:hover {
   vertical-align: bottom;
 }
 .slider .button:hover {
-  background-color: $orange;
+  background-color: transparent;
+  border: 1px solid #e2e5ea;
   cursor: pointer;
 }
 .slider > * {
@@ -1684,7 +1687,7 @@ h2.headline a:hover {
   margin: 80px 1vw 0 0;
 }
 .s3 {
-  padding: 0 5vw;
+  padding: 0 10vw;
   position: relative;
 }
 .s3:before {
@@ -1709,50 +1712,77 @@ h2.headline a:hover {
   content: '';
 }
 .s3:before {
-  margin-top: 20vh;
+  margin-top: 12vh;
 }
 .s3 .snipe {
   left: 1vw;
-  margin-left: 5.5vw;
+  margin-left: 10.5vw;
   position: absolute;
-  top: 25vh;
+  top: 15vh;
   width: 27.5px;
 }
 .s3 .folio {
-  font-size: 2.25em;
-  letter-spacing: 2px;
-  margin: 17px 0 24px 5vw;
+  font-size: 1.75em;
+  letter-spacing: 1.2px;
+  margin: 17px 0 9px 5vw;
   font-family: 'Quicksand', 'Arial', sans-serif;
   font-weight: 500;
   line-height: 1.5em;
   line-height: 1.3em;
 }
 .s3 .proof {
-  font-size: 1em;
+  font-size: 0.875em;
   letter-spacing: 1px;
-  margin: 0 1vw 0 5vw;
+  margin: 0 1vw;
   font-family: 'Quicksand', 'Arial', sans-serif;
   font-weight: 300;
   line-height: 1.5em;
 }
 .s3 .button {
   float: right;
-  margin: 40px 1vw 0 0;
+  margin: 30px 1vw 0 0;
 }
 .s3 .boxes {
+  height: 100px;
+  overflow: hidden;
+  padding: 0 10vw;
   position: absolute;
-  right: 50%;
-  top: 65vh;
+  right: 0;
+  top: 51vh;
+  width: 100%;
+}
+.s3 .boxes.bottom {
+  top: 64vh;
+}
+.s3 .boxes:after {
+  content: '\e907';
+  font-family: 'icons';
+  font-size: 26px;
+  position: absolute;
+  right: 110px;
+  top: 38px;
+  transition: color 800ms ease;
+  vertical-align: middle;
+}
+.s3 .boxes:hover:after {
+  color: #3db779;
 }
 .s3 .type {
+  float: left;
   font-size: 1.2em;
+  letter-spacing: 3px;
   font-family: 'Quicksand', 'Arial', sans-serif;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.5em;
+  line-height: 100px;
+  text-align: right;
   text-transform: uppercase;
+  width: 25%;
 }
 .s3 .box {
   display: inline-block;
+  float: right;
+  margin: 0 1vw;
   width: 100px;
 }
 .s3 .box img {
