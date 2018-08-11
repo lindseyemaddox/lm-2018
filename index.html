@@ -37,20 +37,34 @@
     <script type="text/javascript" src="_scripts/min/nav-min.js"></script>
     <script type="text/javascript" src="_scripts/min/main-min.js"></script>
     <script type="text/javascript" src="_scripts/min/html5ext-min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.fancybox').fancybox();
-        $('.flexslider').flexslider({
-          animation: "slide",
-          customDirectionNav: $("a.flex-next.icon-arrow"),
-          animationLoop: true,
-          itemWidth: 100,
-          itemMargin: 2,
-          minItems: 2,
-          maxItems: 5
-        });
-      });
+    <script>
+      (function() {
       
+        // store the slider in a local variable
+        var $window = $(window),
+            flexslider = { vars:{} };
+       
+        // tiny helper function to add breakpoints
+        function getGridSize() {
+          return (window.innerWidth < 100) ? 2 :
+                 (window.innerWidth < 750) ? 3 : 4;
+        }
+       
+        $(document).ready(function() {
+          $('.fancybox').fancybox();
+          $('.flexslider').flexslider({
+            minItems: getGridSize(), // use function to pull in initial value
+            maxItems: getGridSize() // use function to pull in initial value
+          });
+        });
+       
+        // check grid size on resize event
+        $window.resize(function() {
+          var gridSize = getGridSize();
+          flexslider.vars.minItems = gridSize;
+          flexslider.vars.maxItems = gridSize;
+        });
+      }());
       
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55633656-1"></script>
@@ -78,7 +92,7 @@
         <div class="layout home">
           <div class="main">
             <section class="grid">
-              <div class="slides">
+              <div class="slidesbox">
                 <s id="s1"></s>
                 <s id="s2"></s>
                 <s id="s3"></s>
@@ -95,39 +109,40 @@
                   <div class="s3"><img src="_images/cream-girl.png" alt="small Lindsey Maddox logo" class="snipe">
                     <h3 class="folio">...more than 13 years of experience and an impressive portfolio to back it up... </h3>
                     <p class="proof">Lindsey delivers clean compositions resulting in intuitive and accessible client experiences. She has a knack for fusing her natural artistic abilities with her graphic design training, producing original, imaginative brainchildren.</p><a href="_includes/slideshow" title="Lindsey Maddox portfolio" target="_blank" class="button fancybox">View Slideshow</a>
-                    <div class="boxes flexslider carousel">
-                      <h4 class="type">Design</h4>
-                      <ul class="slides">
-                        <li href="_images/tuba.jpg" class="box"><img src="_images/box-tuba.jpg"></li>
-                        <li href="_images/travismeadows.jpg" class="box"><img src="_images/box-travismeadows.jpg"></li>
-                        <li href="_images/symphony.jpg" class="box"><img src="_images/box-symphony.jpg"></li>
-                        <li href="_images/aidswalk.jpg" class="box"><img src="_images/box-aidswalk.jpg"></li>
-                        <li href="_images/simply-people.jpg" class="box"><img src="_images/box-simply-people.jpg"></li>
-                        <li href="_images/rsg.jpg" class="box"><img src="_images/box-rsg.jpg"></li>
-                        <li href="_images/petrelli.jpg" class="box"><img src="_images/box-petrelli.jpg"></li>
-                        <li href="_images/sounds.jpg" class="box"><img src="_images/box-sounds.jpg"></li>
-                        <li href="_images/oceano.jpg" class="box"><img src="_images/box-oceano.jpg"></li>
-                        <li href="_images/martha.jpg" class="box"><img src="_images/box-martha.jpg"></li>
-                        <li href="_images/kenricks.jpg" class="box"><img src="_images/box-kenricks.jpg"></li>
-                        <li href="_images/kitty.jpg" class="box"><img src="_images/box-kitty.jpg"></li>
-                        <li href="_images/fasterfitness.jpg" class="box"><img src="_images/box-fasterfitness.jpg"></li>
-                        <li href="_images/skulls.jpg" class="box"><img src="_images/box-skulls.jpg"></li>
-                        <li href="_images/inquicker.jpg" class="box"><img src="_images/box-inquicker.jpg"></li>
-                        <li href="_images/angry-logo.jpg" class="box"><img src="_images/box-angry-logo.jpg"></li>
-                        <li href="_images/coffeelunch.jpg" class="box"><img src="_images/box-coffeelunch.jpg"></li>
-                        <li href="_images/bkon.jpg" class="box"><img src="_images/box-bkon.jpg"></li>
-                        <li href="_images/cirrus.jpg" class="box"><img src="_images/box-cirrus.jpg"></li>
-                        <li href="_images/precision.jpg" class="box"><img src="_images/box-precision.jpg"></li>
-                        <li href="_images/tnrmt.jpg" class="box"><img src="_images/box-tnrmt.jpg"></li><a class="flex-next icon-arrow"></a>
-                      </ul>
-                    </div>
-                    <div class="boxes bottom">
-                      <h4 class="type">Development</h4>
-                      <div class="inner"><a href="_images/martha.jpg" class="box"><img src="_images/box-martha.jpg"></a><a href="_images/inquicker.jpg" class="box"><img src="_images/box-inquicker.jpg"></a><a href="_images/sounds.jpg" class="box"><img src="_images/box-sounds.jpg"></a><a href="_images/precision.jpg" class="box"><img src="_images/box-precision.jpg"></a><a href="_images/sef.jpg" class="box"><img src="_images/box-sef.jpg"></a><a href="_images/skulls.jpg" class="box"><img src="_images/box-skulls.jpg"></a><a href="_images/connico.jpg" class="box"><img src="_images/box-connico.jpg"></a><a href="_images/coffeelunch.jpg" class="box"><img src="_images/box-coffeelunch.jpg"></a><a href="_images/simply-people.jpg" class="box"><img src="_images/box-simply-people.jpg"></a><a href="_images/tsu.jpg" class="box"><img src="_images/box-tsu.jpg"></a><a href="_images/bkon.jpg" class="box"><img src="_images/box-bkon.jpg"></a><a href="_images/tnrmt.jpg" class="box"><img src="_images/box-tnrmt.jpg"></a></div>
+                    <div class="boxes">
+                      <div class="flexslider carousel">       
+                        <ul class="slides">
+                          <li class="box"><a href="_images/tuba.jpg" class="fancybox"><img src="_images/box-tuba.jpg"></a></li>
+                          <li href="_images/travismeadows.jpg" class="box"><img src="_images/box-travismeadows.jpg"></li>
+                          <li href="_images/symphony.jpg" class="box"><img src="_images/box-symphony.jpg"></li>
+                          <li href="_images/aidswalk.jpg" class="box"><img src="_images/box-aidswalk.jpg"></li>
+                          <li href="_images/simply-people.jpg" class="box"><img src="_images/box-simply-people.jpg"></li>
+                          <li href="_images/rsg.jpg" class="box"><img src="_images/box-rsg.jpg"></li>
+                          <li href="_images/petrelli.jpg" class="box"><img src="_images/box-petrelli.jpg"></li>
+                          <li href="_images/sounds.jpg" class="box"><img src="_images/box-sounds.jpg"></li>
+                          <li href="_images/oceano.jpg" class="box"><img src="_images/box-oceano.jpg"></li>
+                          <li href="_images/martha.jpg" class="box"><img src="_images/box-martha.jpg"></li>
+                          <li href="_images/kenricks.jpg" class="box"><img src="_images/box-kenricks.jpg"></li>
+                          <li href="_images/kitty.jpg" class="box"><img src="_images/box-kitty.jpg"></li>
+                          <li href="_images/fasterfitness.jpg" class="box"><img src="_images/box-fasterfitness.jpg"></li>
+                          <li href="_images/skulls.jpg" class="box"><img src="_images/box-skulls.jpg"></li>
+                          <li href="_images/inquicker.jpg" class="box"><img src="_images/box-inquicker.jpg"></li>
+                          <li href="_images/angry-logo.jpg" class="box"><img src="_images/box-angry-logo.jpg"></li>
+                          <li href="_images/coffeelunch.jpg" class="box"><img src="_images/box-coffeelunch.jpg"></li>
+                          <li href="_images/bkon.jpg" class="box"><img src="_images/box-bkon.jpg"></li>
+                          <li href="_images/cirrus.jpg" class="box"><img src="_images/box-cirrus.jpg"></li>
+                          <li href="_images/precision.jpg" class="box"><img src="_images/box-precision.jpg"></li>
+                          <li href="_images/tnrmt.jpg" class="box"><img src="_images/box-tnrmt.jpg"></li><a class="flex-next icon-arrow"></a>
+                        </ul>
+                      </div>
+                      <div class="boxes bottom">
+                        <h4 class="type">Development</h4>
+                        <div class="inner"><a href="_images/martha.jpg" class="box"><img src="_images/box-martha.jpg"></a><a href="_images/inquicker.jpg" class="box"><img src="_images/box-inquicker.jpg"></a><a href="_images/sounds.jpg" class="box"><img src="_images/box-sounds.jpg"></a><a href="_images/precision.jpg" class="box"><img src="_images/box-precision.jpg"></a><a href="_images/sef.jpg" class="box"><img src="_images/box-sef.jpg"></a><a href="_images/skulls.jpg" class="box"><img src="_images/box-skulls.jpg"></a><a href="_images/connico.jpg" class="box"><img src="_images/box-connico.jpg"></a><a href="_images/coffeelunch.jpg" class="box"><img src="_images/box-coffeelunch.jpg"></a><a href="_images/simply-people.jpg" class="box"><img src="_images/box-simply-people.jpg"></a><a href="_images/tsu.jpg" class="box"><img src="_images/box-tsu.jpg"></a><a href="_images/bkon.jpg" class="box"><img src="_images/box-bkon.jpg"></a><a href="_images/tnrmt.jpg" class="box"><img src="_images/box-tnrmt.jpg"></a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="scroll-indicator"><a href="#s1" class="dot"></a><a href="#s2" class="dot"></a><a href="#s3" class="dot"></a></div>
+                <div class="scroll-indicatory"><a href="#s1" class="dot"></a><a href="#s2" class="dot"></a><a href="#s3" class="dot"></a></div>
               </div>
             </section>
           </div>

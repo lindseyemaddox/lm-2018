@@ -1,5 +1,5 @@
 
-.slides
+.slidesbox
   height: 100% /* Or set a fixed height */
   overflow: hidden
   position: relative
@@ -14,15 +14,15 @@
   .button
     button(300px)
 
-.slider > *
-  background: none 50% no-repeat
-  background-size: cover
-  display: inline-block
-  font-size: 1rem
-  height: 100%
-  vertical-align: top
-  white-space: normal
-  width: 100%
+  & > *
+    background: none 50% no-repeat
+    background-size: cover
+    display: inline-block
+    font-size: 1rem
+    height: 100%
+    vertical-align: top
+    white-space: normal
+    width: 100%
 
 #s1:target ~ .slider
   transform: translateX(0%)
@@ -104,7 +104,7 @@
   position: relative
 
   &:before
-    margin-top: 12vh
+    margin-top: 10vh
 
   .snipe
     left: 1vw
@@ -132,27 +132,61 @@
 
   .boxes
     height: 100px
-    overflow: hidden
-    padding: 0 10vw
     position: absolute
-    right: 0
-    top: 47vh
-    width: 100%
+    right: 7.5vw
+    top: 51vh
+    width: 28vw
 
     &.bottom
       top: 64vh
 
-    .flex.next
-      font-family: 'icons'
-      font-size: 26px
-      position: absolute
-      right: 110px
-      top: 38px
-      transition: color 800ms ease
-      vertical-align: middle
+    .carousel
 
-    &:hover:after
-      color: $green
+      li
+        margin-right: 0
+
+      .flex-direction-nav, &:hover .flex-direction-nav
+        .flex-prev, .flex-next
+          opacity: 1
+
+    .flex-direction-nav a
+      color: transparent
+      text-shadow: none
+
+      &:after
+        color: $white
+        font-family: 'icons'
+        font-size: 26px
+        position: absolute
+        right: 0
+        top: 0
+        transition: color 800ms ease
+        vertical-align: middle
+
+      &:before
+        color: $white
+        font-family: 'icons'
+        font-size: 26px
+        position: absolute
+        right: 0
+        top: 0
+        transition: color 800ms ease
+        vertical-align: middle
+
+    .flex-direction-nav a.flex-next::before
+      content: "\e907"
+
+    .flex-direction-nav a.flex-prev::before
+      content: "\e907"
+      transform: rotate(180deg)
+
+    .flexslider .flex-direction-nav .flex-next,
+    .flexslider:hover .flex-direction-nav .flex-next
+      right: -40px
+
+    .flexslider .flex-direction-nav .flex-prev,
+    .flexslider:hover .flex-direction-nav .flex-prev
+      left: -60px
 
   .type
     float: left
@@ -166,8 +200,6 @@
 
   .box
     display: inline-block
-    float: right
-    margin: 0 1vw
     width: 100px
 
     img

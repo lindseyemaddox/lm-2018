@@ -690,6 +690,10 @@ html {
 .icon-arrow:before {
   content: "\e907";
 }
+.icon-arrow-back:before {
+  content: "\e907";
+  rotation: 180deg;
+}
 @media (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1000px) and (min-resolution: 192dpi) {
   html {
     background-image: url("/_images/puzzle-overlay.jpg");
@@ -750,66 +754,64 @@ html {
 .layout--collapsed {
   animation: layout-slide 400ms 100ms forwards;
 }
-.scroll-indicator {
-  bottom: 150px;
-  width: 100%;
+.scroll-indicatory {
+  bottom: 90px;
   position: absolute;
   text-align: center;
+  width: 100%;
 }
-.scroll-indicator .dot {
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  border-radius: 10px;
-  border: 1px solid #e2e5ea;
-  margin-left: auto;
-  margin-right: auto;
+.scroll-indicatory .dot {
   animation: dot 13s 3s infinite ease-in-out;
-  opacity: 1;
-  margin: 0 10px;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s ease;
   background-color: rgba(226,229,234,0.5) /* Dim all but first */;
+  border: 1px solid #e2e5ea;
+  border-radius: 10px;
+  display: inline-block;
+  height: 12px;
+  margin: 0 10px;
+  opacity: 1;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 12px;
 }
-.scroll-indicator >*:nth-child(1) {
+.scroll-indicatory >*:nth-child(1) {
   animation-delay: 3.25s;
   background: #3db779;
 }
-.scroll-indicator >*:nth-child(2) {
+.scroll-indicatory >*:nth-child(2) {
   animation-delay: 3.5s;
 }
-.scroll-indicator >*:nth-child(3) {
+.scroll-indicatory >*:nth-child(3) {
   animation-delay: 3.75s;
 }
-.scroll-indicator >*:nth-child(4) {
+.scroll-indicatory >*:nth-child(4) {
   animation-delay: 4s;
 }
-#s1:target ~ .scroll-indicator >*:nth-child(1) {
+#s1:target ~ .scroll-indicatory >*:nth-child(1) {
   background: #3db779;
 }
-#s1:target ~ .scroll-indicator >*:not(:nth-child(1)) {
+#s1:target ~ .scroll-indicatory >*:not(:nth-child(1)) {
   background: rgba(226,229,234,0.5);
 }
-#s2:target ~ .scroll-indicator >*:nth-child(2) {
+#s2:target ~ .scroll-indicatory >*:nth-child(2) {
   background: #3db779;
 }
-#s2:target ~ .scroll-indicator >*:not(:nth-child(2)) {
+#s2:target ~ .scroll-indicatory >*:not(:nth-child(2)) {
   background: rgba(226,229,234,0.5);
 }
-#s3:target ~ .scroll-indicator >*:nth-child(3) {
+#s3:target ~ .scroll-indicatory >*:nth-child(3) {
   background: #3db779;
 }
-#s3:target ~ .scroll-indicator >*:not(:nth-child(3)) {
+#s3:target ~ .scroll-indicatory >*:not(:nth-child(3)) {
   background: rgba(226,229,234,0.5);
 }
-#s4:target ~ .scroll-indicator >*:nth-child(4) {
+#s4:target ~ .scroll-indicatory >*:nth-child(4) {
   background: #3db779;
 }
-#s4:target ~ .scroll-indicator >*:not(:nth-child(4)) {
+#s4:target ~ .scroll-indicatory >*:not(:nth-child(4)) {
   background: rgba(226,229,234,0.5);
 }
-.scroll-indicator .dot:hover {
+.scroll-indicatory .dot:hover {
   background: #e2e5ea !important;
   opacity: 1 !important;
   transform: none !important;
@@ -1332,7 +1334,7 @@ h2.headline a:hover {
   border-bottom-width: 2px;
   color: #3db779;
 }
-.slides {
+.slidesbox {
   height: 100% /* Or set a fixed height */;
   overflow: hidden;
   position: relative;
@@ -1534,7 +1536,7 @@ h2.headline a:hover {
   content: '';
 }
 .s3:before {
-  margin-top: 12vh;
+  margin-top: 10vh;
 }
 .s3 .snipe {
   left: 1vw;
@@ -1566,27 +1568,61 @@ h2.headline a:hover {
 }
 .s3 .boxes {
   height: 100px;
-  overflow: hidden;
-  padding: 0 10vw;
   position: absolute;
-  right: 0;
-  top: 47vh;
-  width: 100%;
+  right: 7.5vw;
+  top: 51vh;
+  width: 28vw;
 }
 .s3 .boxes.bottom {
   top: 64vh;
 }
-.s3 .boxes .flex.next {
+.s3 .boxes .carousel li {
+  margin-right: 0;
+}
+.s3 .boxes .carousel .flex-direction-nav .flex-prev,
+.s3 .boxes .carousel:hover .flex-direction-nav .flex-prev,
+.s3 .boxes .carousel .flex-direction-nav .flex-next,
+.s3 .boxes .carousel:hover .flex-direction-nav .flex-next {
+  opacity: 1;
+}
+.s3 .boxes .flex-direction-nav a {
+  color: transparent;
+  text-shadow: none;
+}
+.s3 .boxes .flex-direction-nav a:after {
+  color: #e2e5ea;
   font-family: 'icons';
   font-size: 26px;
   position: absolute;
-  right: 110px;
-  top: 38px;
+  right: 0;
+  top: 0;
   transition: color 800ms ease;
   vertical-align: middle;
 }
-.s3 .boxes:hover:after {
-  color: #3db779;
+.s3 .boxes .flex-direction-nav a:before {
+  color: #e2e5ea;
+  font-family: 'icons';
+  font-size: 26px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: color 800ms ease;
+  vertical-align: middle;
+}
+.s3 .boxes .flex-direction-nav a.flex-next::before {
+  content: "\e907";
+}
+.s3 .boxes .flex-direction-nav a.flex-prev::before {
+  content: "\e907";
+  transform: rotate(180deg);
+}
+.s3 .boxes .flexslider .flex-direction-nav .flex-next,
+.s3 .boxes .flexslider:hover .flex-direction-nav .flex-next {
+  right: -40px;
+}
+.s3 .boxes .flexslider .flex-direction-nav .flex-prev,
+.s3 .boxes .flexslider:hover .flex-direction-nav .flex-prev {
+  left: -60px;
 }
 .s3 .type {
   float: left;
@@ -1602,8 +1638,6 @@ h2.headline a:hover {
 }
 .s3 .box {
   display: inline-block;
-  float: right;
-  margin: 0 1vw;
   width: 100px;
 }
 .s3 .box img {
