@@ -44,6 +44,7 @@ html(lang=locale)
       script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js')
       script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
       script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js')
+      script(type='text/javascript' src='_scripts/min/flexslider-min.js')
       script(type='text/javascript' src='_scripts/min/nav-min.js')
       script(type='text/javascript' src='_scripts/min/main-min.js')
       script(type='text/javascript' src='_scripts/min/html5ext-min.js')
@@ -51,41 +52,17 @@ html(lang=locale)
       script(type='text/javascript').
         $(document).ready(function() {
           $('.fancybox').fancybox();
+          $('.flexslider').flexslider({
+            animation: "slide",
+            customDirectionNav: $("a.flex-next.icon-arrow"),
+            animationLoop: true,
+            itemWidth: 100,
+            itemMargin: 2,
+            minItems: 2,
+            maxItems: 5
+          });
         });
 
-        (function() {
-         
-          var $window = $(window),
-              flexslider = { vars:{} };
-         
-          function getGridSize() {
-            return (window.innerWidth < 600) ? 2 :
-                   (window.innerWidth < 900) ? 3 : 4;
-          }
-         
-          $(function() {
-            SyntaxHighlighter.all();
-          });
-         
-          $window.load(function() {
-            $('.flexslider').flexslider({
-              animation: "slide",
-              animationLoop: false,
-              itemWidth: 210,
-              itemMargin: 5,
-              minItems: getGridSize(), // use function to pull in initial value
-              maxItems: getGridSize() // use function to pull in initial value
-            });
-          });
-         
-          // check grid size on resize event
-          $window.resize(function() {
-            var gridSize = getGridSize();
-         
-            flexslider.vars.minItems = gridSize;
-            flexslider.vars.maxItems = gridSize;
-          });
-        }());
 
       script(async src='https://www.googletagmanager.com/gtag/js?id=UA-55633656-1')
       script.
