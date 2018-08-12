@@ -1389,16 +1389,17 @@ h2.headline a:hover {
   left: -60px;
 }
 .s3 .type {
-  float: left;
   font-size: 1.2em;
+  left: -140px;
   letter-spacing: 3px;
+  position: absolute;
   font-family: 'Quicksand', 'Arial', sans-serif;
   font-weight: 300;
   line-height: 1.5em;
   line-height: 100px;
   text-align: right;
   text-transform: uppercase;
-  width: 25%;
+  top: 9px;
 }
 .s3 .box {
   display: inline-block;
@@ -1418,7 +1419,26 @@ h2.headline a:hover {
   background: transparent;
   border: 0;
 }
-#tuba {
+#travis,
+#tuba,
+#symphony,
+#aidswalk,
+#people,
+#rsg,
+#petrelli,
+#sounds,
+#oceano,
+#martha,
+#kenricks,
+#kitty,
+#fasterfitness,
+#skulls,
+#inquicker,
+#angry,
+#coffeelunch,
+#bkon,
+#cirrus,
+#precision {
   display: none;
   max-height: 100%;
   max-width: 100%;
