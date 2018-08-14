@@ -1162,21 +1162,22 @@ h2.headline a:hover {
   transform: translateX(-200%);
 }
 .logo {
+  bottom: 9px;
   left: 0;
-  margin: 3vh 0 0;
   position: absolute;
   width: 38%;
 }
 .tag {
   float: right;
-  margin-left: 1vw;
-  padding-bottom: 65px;
+  margin-left: 110px;
+  padding-bottom: 11px;
 }
 .snipe {
   width: 180px;
 }
 .s1 {
-  padding-left: 360px;
+  margin-top: 32px;
+  padding-left: 281px;
 }
 .s1:before {
   border: 2px solid #e2e5ea;
@@ -1213,12 +1214,11 @@ h2.headline a:hover {
   line-height: 1.5em;
 }
 .s1 .button {
-  clear: right;
-  float: right;
-  margin-right: 1vw;
+  float: left;
+  margin-left: 12.5%;
 }
 .s2 {
-  padding-right: 420px;
+  padding-right: 423px;
 }
 .s2:before {
   border: 2px solid #e2e5ea;
@@ -1240,6 +1240,9 @@ h2.headline a:hover {
   width: 100%;
   clear: right;
   content: '';
+}
+.s2:before {
+  margin-top: 31vh;
 }
 .s2 .testie {
   font-size: 1.5em;
@@ -1265,14 +1268,14 @@ h2.headline a:hover {
   text-align: right;
 }
 .s2 .woo {
-  margin: 7vh 0 0;
+  bottom: 0;
   position: absolute;
-  right: -102%;
-  width: 44%;
+  right: -101%;
+  width: 48%;
 }
 .s2 .button {
   float: right;
-  margin: 80px 1vw 0 0;
+  margin: 80px 12% 0 0;
 }
 .s3 {
   padding: 0 7.5vw;
@@ -1300,18 +1303,23 @@ h2.headline a:hover {
   content: '';
 }
 .s3:before {
-  margin-top: 12vh;
+  margin-top: 20vh;
 }
 .s3 .snipe {
   left: 1vw;
   margin-left: 7.5vw;
   position: absolute;
-  top: 15vh;
+  top: 23vh;
   width: 27.5px;
 }
+.s3 .legit {
+  float: left;
+  padding-right: 20px;
+  width: 28%;
+}
 .s3 .folio {
-  font-size: 1.75em;
-  letter-spacing: 1.2px;
+  font-size: 1.65em;
+  letter-spacing: 1.1px;
   margin: 17px 1vw 9px 4vw;
   font-family: 'Quicksand', 'Arial', sans-serif;
   font-weight: 500;
@@ -1334,11 +1342,11 @@ h2.headline a:hover {
   height: 100px;
   position: absolute;
   right: 7.5vw;
-  top: 51vh;
-  width: 28vw;
+  top: 56vh;
+  width: 55%;
 }
 .s3 .boxes.bottom {
-  top: 64vh;
+  top: 70vh;
 }
 .s3 .boxes .carousel li {
   margin-right: 0;
@@ -1382,24 +1390,24 @@ h2.headline a:hover {
 }
 .s3 .boxes .flexslider .flex-direction-nav .flex-next,
 .s3 .boxes .flexslider:hover .flex-direction-nav .flex-next {
-  right: -40px;
+  right: -35px;
 }
 .s3 .boxes .flexslider .flex-direction-nav .flex-prev,
 .s3 .boxes .flexslider:hover .flex-direction-nav .flex-prev {
-  left: -60px;
+  left: -50px;
 }
 .s3 .type {
   font-size: 1.2em;
-  left: -140px;
   letter-spacing: 3px;
   position: absolute;
   font-family: 'Quicksand', 'Arial', sans-serif;
   font-weight: 300;
   line-height: 1.5em;
   line-height: 100px;
+  right: 610px;
   text-align: right;
   text-transform: uppercase;
-  top: 9px;
+  top: 11px;
 }
 .s3 .box {
   display: inline-block;
@@ -1418,6 +1426,19 @@ h2.headline a:hover {
 .flexslider {
   background: transparent;
   border: 0;
+}
+.fancybox-toolbar {
+  opacity: 1;
+  right: 21px;
+  top: 28px;
+  visibility: visible;
+}
+.fancybox-button--fullscreen,
+.fancybox-button--share {
+  display: none;
+}
+.fancybox-image {
+  bottom: 40px;
 }
 #travis,
 #tuba,
@@ -1438,23 +1459,24 @@ h2.headline a:hover {
 #coffeelunch,
 #bkon,
 #cirrus,
-#precision {
+#precision,
+#tsu,
+#connico,
+#sef,
+#slideshow {
   display: none;
   max-height: 100%;
   max-width: 100%;
 }
-.fancybox-toolbar {
-  opacity: 1;
-  right: 21px;
-  top: 28px;
-  visibility: visible;
-}
-.fancybox-button--fullscreen,
-.fancybox-button--share {
+#hideshow {
   display: none;
 }
-.fancybox-image {
-  bottom: 40px;
+#hideshow .fancybox {
+  height: 70vh;
+  width: 80vw;
+}
+#hideshow .fancybox img {
+  width: 100%;
 }
 #warp {
   width: 100%;

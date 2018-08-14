@@ -34,22 +34,23 @@
   transform: translateX(-200%)
 
 .logo
+  bottom: 9px
   left: 0
-  margin: 3vh 0 0
   position: absolute
   width: 38%
 
 .tag
   float: right
-  margin-left: 1vw
-  padding-bottom: 65px
+  margin-left: 110px
+  padding-bottom: 11px
 
 .snipe
   width: 180px
 
 .s1
   lines()
-  padding-left: 360px
+  margin-top: 32px
+  padding-left: 281px
 
   .tag
     font-size: 1.75em
@@ -61,13 +62,15 @@
       primary-font($bold)
 
   .button
-    clear: right
-    float: right
-    margin-right: 1vw
+    float: left
+    margin-left: 12.5%
 
 .s2
   lines()
-  padding-right: 420px
+  padding-right: 423px
+
+  &:before
+    margin-top: 31vh
 
   .testie
     font-size: 1.5em
@@ -89,14 +92,14 @@
     text-align: right
 
   .woo
-    margin: 7vh 0 0
+    bottom: 0
     position: absolute
-    right: -102%
-    width: 44%
+    right: -101%
+    width: 48%
 
   .button
     float: right
-    margin: 80px 1vw 0 0
+    margin: 80px 12% 0 0
 
 .s3
   lines()
@@ -104,18 +107,23 @@
   position: relative
 
   &:before
-    margin-top: 12vh
+    margin-top: 20vh
 
   .snipe
     left: 1vw
     margin-left: 7.5vw
     position: absolute
-    top: 15vh
+    top: 23vh
     width: 27.5px
 
+  .legit
+    float: left
+    padding-right: 20px
+    width: 28%
+
   .folio
-    font-size: 1.75em
-    letter-spacing: 1.2px
+    font-size: 1.65em
+    letter-spacing: 1.1px
     margin: 17px 1vw 9px 4vw
     primary-font($regular)
     line-height: 1.3em
@@ -134,11 +142,11 @@
     height: 100px
     position: absolute
     right: 7.5vw
-    top: 51vh
-    width: 28vw
+    top: 56vh
+    width: 55%
 
     &.bottom
-      top: 64vh
+      top: 70vh
 
     .carousel
 
@@ -182,22 +190,22 @@
 
     .flexslider .flex-direction-nav .flex-next,
     .flexslider:hover .flex-direction-nav .flex-next
-      right: -40px
+      right: -35px
 
     .flexslider .flex-direction-nav .flex-prev,
     .flexslider:hover .flex-direction-nav .flex-prev
-      left: -60px
+      left: -50px
 
   .type
     font-size: 1.2em
-    left: -140px
     letter-spacing: 3px
     position: absolute
     primary-font($light)
     line-height: 100px
+    right: 610px
     text-align: right
     text-transform: uppercase
-    top: 9px
+    top: 11px
 
   .box
     display: inline-block
@@ -217,11 +225,6 @@
   background: transparent
   border: 0
 
-#travis, #tuba, #symphony, #aidswalk, #people, #rsg, #petrelli, #sounds, #oceano, #martha, #kenricks, #kitty, #fasterfitness, #skulls, #inquicker, #angry, #coffeelunch, #bkon, #cirrus, #precision
-  display: none
-  max-height: 100%
-  max-width: 100%
-
 .fancybox-toolbar
   opacity: 1
   right: 21px
@@ -234,3 +237,18 @@
 
 .fancybox-image
   bottom: 40px
+
+#travis, #tuba, #symphony, #aidswalk, #people, #rsg, #petrelli, #sounds, #oceano, #martha, #kenricks, #kitty, #fasterfitness, #skulls, #inquicker, #angry, #coffeelunch, #bkon, #cirrus, #precision, #tsu, #connico, #sef, #inquicker, #slideshow
+  display: none
+  max-height: 100%
+  max-width: 100%
+
+#hideshow
+  display: none
+
+  .fancybox
+    height: 70vh
+    width: 80vw
+
+    img
+      width: 100%
