@@ -504,7 +504,6 @@ html {
 .layout .main .grid {
   height: 100vh;
   margin: 0 auto;
-  padding: 35px 0 0;
 }
 .layout .sidebar {
   bottom: 0;
@@ -519,7 +518,7 @@ html {
   animation: layout-slide 400ms 100ms forwards;
 }
 .scroll-indicatory {
-  bottom: 90px;
+  bottom: 40px;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -1064,10 +1063,6 @@ input:checked ~ [class^="icon"] span.bar:nth-child(2) {
   width: 100%;
   z-index: 0;
 }
-.background-overlay.video,
-.background-overlay.home {
-  background: url("../_images/burned.png") no-repeat center center transparent;
-}
 video {
   background-size: cover;
   height: 110%;
@@ -1163,7 +1158,8 @@ h2.headline a:hover {
 }
 .logo {
   bottom: 9px;
-  left: 0;
+  left: 70px;
+  max-width: 320px;
   position: absolute;
   width: 38%;
 }
@@ -1303,7 +1299,7 @@ h2.headline a:hover {
   content: '';
 }
 .s3:before {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 .s3 .snipe {
   left: 1vw;
@@ -1318,7 +1314,7 @@ h2.headline a:hover {
   width: 28%;
 }
 .s3 .folio {
-  font-size: 1.65em;
+  font-size: 1.5em;
   letter-spacing: 1.1px;
   margin: 17px 1vw 9px 4vw;
   font-family: 'Quicksand', 'Arial', sans-serif;
