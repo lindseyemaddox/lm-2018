@@ -24,6 +24,14 @@
     white-space: normal
     width: 100%
 
+    @media screen and (max-width: 1000px)
+      margin-right: 10%
+      width: 90%
+
+    @media screen and (max-width: 700px)
+      margin-right: 0
+      width: 100%
+
 #s1:target ~ .slider
   transform: translateX(0%)
 
@@ -40,6 +48,16 @@
   position: absolute
   width: 38%
 
+  @media screen and (max-width: 700px)
+    left: 0
+    position: relative
+    width: 15%
+    margin: 0 auto
+    display: block
+
+  @media screen and (max-height: 750px)
+    display: none
+
 .tag
   float: right
   margin-left: 110px
@@ -50,8 +68,18 @@
 
 .s1
   lines()
-  margin-top: 32px
+  margin-top: 132px
   padding-left: 281px
+
+  @media screen and (max-width: 1000px)
+    padding-left: 26vw
+
+  @media screen and (max-width: 900px)
+    margin-top: 0
+    padding-left: 33vw
+
+  @media screen and (max-width: 700px)
+    padding-left: 0
 
   .tag
     font-size: 1.75em
@@ -59,19 +87,45 @@
     primary-font($light)
     text-transform: uppercase
 
+    @media screen and (max-width: 900px)
+      text-align: right
+
+    @media screen and (max-width: 700px)
+      margin: 0 auto
+      padding-bottom: 5vh
+      text-align: center
+      width: 80%
+      float: none
+
     span
       primary-font($bold)
 
   .button
-    float: left
-    margin-left: 12.5%
+    float: right
+
+    @media screen and (max-width: 700px)
+      margin: 0 auto
+      float: none
+
 
 .s2
   lines()
   padding-right: 423px
 
+  @media screen and (max-width: 1000px)
+    padding-right: 32vw
+    margin-left: 10%
+    width: 80%
+
+  @media screen and (max-width: 700px)
+    padding: 0
+    margin: 0 10%
+
   &:before
     margin-top: 31vh
+
+    @media screen and (max-width: 700px)
+      margin-top: 0
 
   .testie
     font-size: 1.5em
@@ -98,21 +152,34 @@
     right: -101%
     width: 48%
 
+    @media screen and (max-width: 700px)
+      bottom: -140px
+      right: -79%
+      width: 50%
+
+    @media screen and (max-height: 800px)
+      display: none
+
   .button
     float: right
     margin: 80px 12% 0 0
+
+    @media screen and (max-width: 700px)
+      margin: 55px 0 0
 
 .s3
   lines()
   padding: 0 7.5vw
   position: relative
 
+  @media screen and (max-width: 1000px)
+    padding: 0 0 0 10%
+
+  @media screen and (max-width: 700px)
+    padding: 0 10%
+
   &:before
-<<<<<<< HEAD
-    margin-top: 10vh
-=======
     margin-top: 12vh
->>>>>>> 96c8ad5b161e7410388d5f9c31a018d101b7f7c6
 
   .snipe
     left: 1vw
@@ -150,8 +217,26 @@
     top: 56vh
     width: 55%
 
+    @media screen and (max-width: 900px)
+      top: 45vh
+      margin: 0 15%
+      right: inherit
+      width: 60%
+
+    @media screen and (max-width: 700px)
+      margin: 0 10%
+
+    @media screen and (max-height: 975px)
+      margin-top: 5vh
+
+    @media screen and (max-height: 812px)
+      display: none
+
     &.bottom
       top: 70vh
+
+      @media screen and (max-width: 900px)
+        top: 64vh
 
     .carousel
 
@@ -168,7 +253,7 @@
 
       &:after
         color: $white
-        font-family: 'icons'
+        font-family: 'lindseymaddox'
         font-size: 26px
         position: absolute
         right: 0
@@ -178,7 +263,7 @@
 
       &:before
         color: $white
-        font-family: 'icons'
+        font-family: 'lindseymaddox'
         font-size: 26px
         position: absolute
         right: 0
@@ -187,10 +272,10 @@
         vertical-align: middle
 
     .flex-direction-nav a.flex-next::before
-      content: "\e907"
+      content: "\e900"
 
     .flex-direction-nav a.flex-prev::before
-      content: "\e907"
+      content: "\e900"
       transform: rotate(180deg)
 
     .flexslider .flex-direction-nav .flex-next,
@@ -211,6 +296,20 @@
     text-align: right
     text-transform: uppercase
     top: 11px
+
+    @media screen and (max-width: 1000px)
+      right: 550px
+      top: 4px
+
+    @media screen and (max-width: 900px)
+      font-size: 1em
+      position: relative
+      right: inherit
+      text-align: center
+      top: 25px
+
+    @media screen and (max-height: 975px)
+      display: none
 
   .box
     display: inline-block
@@ -243,7 +342,7 @@
 .fancybox-image
   bottom: 40px
 
-#travis, #tuba, #symphony, #aidswalk, #people, #rsg, #petrelli, #sounds, #oceano, #martha, #kenricks, #kitty, #fasterfitness, #skulls, #inquicker, #angry, #coffeelunch, #bkon, #cirrus, #precision, #tsu, #connico, #sef, #inquicker, #slideshow
+#testimonials, #travis, #tuba, #symphony, #aidswalk, #people, #rsg, #petrelli, #sounds, #oceano, #martha, #kenricks, #kitty, #fasterfitness, #skulls, #inquicker, #angry, #coffeelunch, #bkon, #cirrus, #precision, #tsu, #connico, #sef, #inquicker, #slideshow
   display: none
   max-height: 100%
   max-width: 100%
@@ -257,3 +356,30 @@
 
     img
       width: 100%
+
+#testimonials
+  color: $white
+  height: 80vh
+  max-width: 700px
+  text-align: left
+
+  p
+    font-size: 1em
+    padding-bottom: 20px
+    primary-font($light)
+
+  h4, h5
+    font-size: .8em
+    letter-spacing: 2px
+    padding-bottom: 5px
+    primary-font($bold)
+    text-align: right
+    text-transform: uppercase
+
+  h4
+    font-size: 1em
+
+  h5
+    border-bottom: 1px solid $white
+    margin-bottom: 60px
+    padding-bottom: 40px

@@ -1,25 +1,23 @@
 
 $icomoon-font-path ?= "../_fonts"
-
-$icon-email = "\e900"
-$icon-portfolio = "\e901"
-$icon-twitter = "\e902"
-$icon-resume = "\e903"
+$icon-arrow = "\e900"
+$icon-email = "\e901"
+$icon-github = "\e902"
+$icon-linkedin = "\e903"
 $icon-nashville = "\e904"
-$icon-linkedin = "\e905"
-$icon-github = "\e906"
-$icon-arrow = "\e907"
-
+$icon-portfolio = "\e905"
+$icon-resume = "\e906"
+$icon-twitter = "\e907"
 
 @font-face
-  font-family: 'icons'
+  font-family 'lindseymaddox'
   font-style: normal
   font-weight: normal
-  src url($icomoon-font-path + '/icons.eot?8n1v0k')
-  src url($icomoon-font-path + '/icons.eot?8n1v0k#iefix') format('embedded-opentype'), url($icomoon-font-path + '/icons.ttf?8n1v0k') format('truetype'), url($icomoon-font-path + '/icons.woff?8n1v0k') format('woff'), url($icomoon-font-path + '/icons.svg?8n1v0k#icons') format('svg')
+  src: url($icomoon-font-path + '/lindseymaddox.eot')
+  src: url($icomoon-font-path + '/lindseymaddox.eot#iefix') format('embedded-opentype'), url($icomoon-font-path + '/lindseymaddox.ttf') format('truetype'), url($icomoon-font-path + '/lindseymaddox.woff') format('woff'), url($icomoon-font-path + '/lindseymaddox.svg#lindseymaddox') format('svg')
 
 [class^="icon-"], [class*=" icon-"]
-  font-family: 'icons' !important
+  font-family: 'lindseymaddox' !important
   font-style: normal
   font-variant: normal
   font-weight: normal
@@ -27,39 +25,31 @@ $icon-arrow = "\e907"
   speak: none
   text-transform: none
 
-.icon-email
-  &:before
-    content: $icon-email
-
-.icon-portfolio
-  &:before
-    content: $icon-portfolio
-
-.icon-twitter
-  &:before
-    content: $icon-twitter
-
-.icon-resume
-  &:before
-    content: $icon-resume
-
-.icon-nashville
-  &:before
-    content: $icon-nashville
-
-.icon-linkedin
-  &:before
-    content: $icon-linkedin
-
-.icon-github
-  &:before
-    content: $icon-github
+  /* Better Font Rendering =========== */
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
 
 .icon-arrow
   &:before
     content: $icon-arrow
-
-.icon-arrow-back
+.icon-email
   &:before
-    content: $icon-arrow
-    rotation: 180deg
+    content: $icon-email
+.icon-github
+  &:before
+    content: $icon-github
+.icon-linkedin
+  &:before
+    content: $icon-linkedin
+.icon-nashville
+  &:before
+    content: $icon-nashville
+.icon-portfolio
+  &:before
+    content: $icon-portfolio
+.icon-resume
+  &:before
+    content: $icon-resume
+.icon-twitter
+  &:before
+    content: $icon-twitter

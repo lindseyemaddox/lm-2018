@@ -1,43 +1,8 @@
 
-nav-icon-view()
-
-  .nav-items
-
-    .dropdown
-      display: none
-
-    a
-      cursor: pointer
-      transition: color 200ms ease
-
-      .list-item
-        opacity: 0
-        display: block
-
-      span
-        display: none
-
-    .sub
-      font-size: 1.5em
-      transition: height 200ms ease
-      overflow: hidden
-      padding-left: 29px
-      height: 0
-
-  .copyline
-    height: 0
-    overflow: hidden
-    transition: height 400ms ease
-
-  [class^="list"] label
-    display: none
-
-  [class^="icon-"]
-    display: none
-
 nav-list-view()
 
   .copyline
+    color: $white
     height: 20px
 
   .nav-items
@@ -50,23 +15,22 @@ nav-list-view()
 
     a[class^="icon-"]
       display: block
-      margin-bottom: 15px
+      font-size: 5em
+      line-height: 57px
+      margin: 0 auto
+
+    a.icon-email
+      padding-top: 30px
 
     a
       cursor: pointer
-      text-align: left
-      width: 80%
-      line-height: 0.1em
       text-decoration: none
 
       span
         display: inline-block
 
-        &.icon-pin
-          vertical-align: middle
-
         &.map
-          font-size: 0.65em
+          font-size: 15px
           margin-right: 0
           vertical-align: middle
           line-height: 1.4em
@@ -119,28 +83,36 @@ nav-list-view()
 
 
 .nav-pane .nav-items
-  margin: 111px auto 0
+  margin: 140px auto 0
   letter-spacing: 4px
 
-  .sub.phones
-    margin-top: 20px
-    padding-left: 50px
+  @media screen and (max-height: 700px)
+    margin-top: 80px
 
-    a
-      font-size: 0.88em
+  .sub.phones
+    a,p,h1,h2
+      font-size: 15px
       height: auto
       text-decoration: none
       color: $black
-      padding-bottom: 20px
+      padding-bottom: 3px
+      text-align: center
       text-transform: uppercase
       primary-font($light)
+
+    h1
+      font-size: 32px
+
+    h2
+      font-size: 20px
+      line-height: 28px
+      padding: 18px 0
 
   a
     display: block
     text-align: center
     font-size: 3.5em
     height: 63px
-    padding-left: 20px
 
     &:before
       font-size: 0.5em
@@ -199,6 +171,7 @@ nav-list-view()
   transform: translateX(0px)
   top: 0
   height: 100vh
+  right: -150px
   width: 75px
   // overflow: hidden
   nav-icon-view()
@@ -215,10 +188,10 @@ nav-list-view()
         color: $green
 
       &:before
-        color: $white
+        color: $black
 
       span
-        color: $white
+        color: $black
 
       .dropdown span.bar
         background: $white
@@ -227,32 +200,18 @@ nav-list-view()
       display: none
 
   &.open
-    transform: translateX(-286px)
+    transform: translateX(-148px)
     transition: 250ms
-    width: 360px
-    background-color: rgba($black, 0.9)
+    width: 272px
+    background-color: rgba($white, 0.9)
     box-shadow: 0px 3px 10px rgba($black, 0.2)
     nav-list-view()
 
-.nav-pane.open .nav-items .listthree
+.nav-pane.open .nav-items
   .socials
-    height: 0
-    margin: 60px 0 0 34px
-    overflow: hidden
-
-    a[class^="icon-"]
-      display: inline
-      font-size: 2.6em
-      line-height: 1em
-      text-decoration: none
-      width: auto
-      padding: 0 9px 0 0
-      color: $green
-
-  [class^="icon-"]:not(.icon-contact)
-    color: $white
-    font-size: 2em
-    padding-right: 9px
+    position: absolute
+    bottom: 10vh
+    width: 100%
 
 .toggle-nav
   cursor: pointer
@@ -261,12 +220,12 @@ nav-list-view()
   position: fixed
   right: 11px
 
-  span.m
+  span.c
     margin-left: 10px
 
-  span.m, span.n, span.u
+  span.c, span.o, span.n, span.a, span.b, span.t
     display: inline-block
-    font-size: 0.75rem
+    font-size: 24px
     opacity: 0
     transition: 250ms
     letter-spacing: 1px
@@ -296,9 +255,9 @@ nav-list-view()
       transition: 250ms
       position: relative
       display: block
-      background: $white
+      background: $green
       border-radius: 1px
-      border-bottom: 1.8px solid lighten($white, 25%)
+      border-bottom: 1.8px solid $green
       width: 20px
       height: 2.5px
 
@@ -306,13 +265,18 @@ nav-list-view()
         margin: 3.6px 0
 
   &:hover
-    span.m, span.n, span.u
+    span.c, span.o, span.n, span.a, span.b, span.t
       opacity: 1
       transition: 250ms
       color: $green
     span.e span.bar
       background-color: $green
       border-bottom-color: $green
+
+  &.open
+    span.c, span.o, span.n, span.a, span.b, span.t
+      opacity: 0
+      transition: opacity 400ms ease-out
 
 input:checked ~ [class^="icon"]
 

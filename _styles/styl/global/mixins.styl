@@ -18,8 +18,8 @@ button(w)
   width: w
 
   &:after
-    content: '\e907'
-    font-family: 'icons'
+    content: '\e900'
+    font-family: 'lindseymaddox'
     font-size: 14px
     padding-left: 10px
     vertical-align: bottom
@@ -39,6 +39,10 @@ line-top()
   margin: 30vh 0 45px
   width: 100%
 
+  @media screen and (max-width: 700px)
+    border: none
+    margin: 10vh 0 0
+
 line-bottom()
   border: 2px solid $white
   border-left: none
@@ -47,6 +51,9 @@ line-bottom()
   float: right
   margin: 45px 0 0
   width: 100%
+
+  @media screen and (max-width: 700px)
+    border: none
 
 lines()
   &:before

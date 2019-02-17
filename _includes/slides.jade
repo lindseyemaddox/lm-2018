@@ -12,13 +12,13 @@
       img.logo(src='_images/cream-legs.png' alt='Lindsey Maddox logo')
             
       h1.tag 
-        span.full &nbsp;&nbsp;&nbsp; Lindsey Maddox 
+        span &nbsp;&nbsp;&nbsp; Lindsey Maddox 
         |is a web developer 
         br.full 
         span.full &nbsp;
         |and graphic designer, creating beauty, function, and pixel-perfection.
       
-      a.button(href='_pdf/lm-resume.pdf' title='Lindsey Maddox resume' target='_blank') Download Resume
+      a.button(href='_pdf/maddox-resume.pdf' title='Lindsey Maddox resume' target='_blank') Download Resume
             
     .s2
 
@@ -30,7 +30,9 @@
       
       p.author &mdash;Abbey Smith, Founder &amp; CEO, Tulu Creative
 
-      a.button.fancybox(href='_includes/testimonials' title='Lindsey Maddox testimonials' target='_blank') View Testimonials
+      a.button.fancybox(href='#testimonials') View Testimonials
+      
+      include testimonials
 
     .s3
     
@@ -40,7 +42,7 @@
 
       p.proof Lindsey delivers clean compositions resulting in intuitive and accessible client experiences. She has a knack for fusing her natural artistic abilities with her graphic design training, producing original, imaginative brainchildren.
 
-      a.button.fancybox(href='#hideshow') View Slideshow
+      a.button(href='_pdf/maddox-resume.pdf' title='Lindsey Maddox resume' target='_blank') Download Resume
         
       include slideshow
 
@@ -72,9 +74,9 @@
               img(src='_images/box-kitty.jpg')
               img#kitty(src='_images/kitty.jpg')
 
-            a.box.fancybox(href='#fasterfitness')
-              img(src='_images/box-fasterfitness.jpg')
-              img#fasterfitness(src='_images/fasterfitness.jpg')
+            //- a.box.fancybox(href='#fasterfitness')
+            //-   img(src='_images/box-fasterfitness.jpg')
+            //-   img#fasterfitness(src='_images/fasterfitness.jpg')
 
             a.box.fancybox(href='#tuba')
               img(src='_images/box-tuba.jpg')
@@ -88,17 +90,17 @@
               img(src='_images/box-petrelli.jpg')
               img#petrelli(src='_images/petrelli.jpg')
 
-            a.box.fancybox(href='#rsg')
-              img(src='_images/box-rsg.jpg')
-              img#rsg(src='_images/rsg.jpg')
+            //- a.box.fancybox(href='#rsg')
+            //-   img(src='_images/box-rsg.jpg')
+            //-   img#rsg(src='_images/rsg.jpg')
 
-            a.box.fancybox(href='#oceano')
-              img(src='_images/box-oceano.jpg')
-              img#oceano(src='_images/oceano.jpg')
+            //- a.box.fancybox(href='#oceano')
+            //-   img(src='_images/box-oceano.jpg')
+            //-   img#oceano(src='_images/oceano.jpg')
 
-            a.box.fancybox(href='#kenricks')
-              img(src='_images/box-kenricks.jpg')
-              img#kenricks(src='_images/kenricks.jpg')
+            //- a.box.fancybox(href='#kenricks')
+            //-   img(src='_images/box-kenricks.jpg')
+            //-   img#kenricks(src='_images/kenricks.jpg')
 
             a.flex-next.icon-arrow
 
@@ -110,37 +112,40 @@
         
           .slides
             
-            a.box.fancybox(href='#precision')
+            a.box(href='http://www.angryeagle.com' target='_blank')
+              img(src='_images/box-angry-logo.jpg')
+              //- img#angry(src='_images/angryeagle.jpg')
+
+            a.box(href='https://www.phy.net/' target='_blank')
+              img(src='_images/box-bkon.jpg')
+              //- img#bkon(src='_images/bkon.jpg')
+
+            a.box(href='http://ngutn.com' target='_blank')
+              img(src='_images/box-ngu.jpg')
+
+            a.box(href='http://www.marthaobryan.org/' target='_blank')
+              img(src='_images/box-martha.jpg')
+              //- img#martha(src='_images/martha.jpg')
+
+            a.box(href='https://inquicker.com/' target='_blank')
+              img(src='_images/box-inquicker.jpg')
+              //- img#inquicker(src='_images/inquicker.jpg')
+
+            a.box(href='http://precisionmetalwork.com/' target='_blank')
               img(src='_images/box-precision.jpg')
-              img#precision(src='_images/precision.jpg')
+              //- img#precision(src='_images/precision.jpg')
+
+            a.box(href='http://foodbeacon.com/' target='_blank')
+              img(src='_images/box-sounds.jpg')
+              //- img#sounds(src='_images/sounds.jpg')
 
             a.box.fancybox(href='#coffeelunch')
               img(src='_images/box-coffeelunch.jpg')
               img#coffeelunch(src='_images/coffeelunch.jpg')
 
-            a.box.fancybox(href='#inquicker')
-              img(src='_images/box-inquicker.jpg')
-              img#inquicker(src='_images/inquicker.jpg')
-
-            a.box.fancybox(href='#angry')
-              img(src='_images/box-angry-logo.jpg')
-              img#angry(src='_images/angryeagle.jpg')
-
-            a.box.fancybox(href='#bkon')
-              img(src='_images/box-bkon.jpg')
-              img#bkon(src='_images/bkon.jpg')
-
-            a.box.fancybox(href='#martha')
-              img(src='_images/box-martha.jpg')
-              img#martha(src='_images/martha.jpg')
-
             a.box.fancybox(href='#tsu')
               img(src='_images/box-tsu.jpg')
               img#tsu(src='_images/tsu.jpg')
-
-            a.box.fancybox(href='#sounds')
-              img(src='_images/box-sounds.jpg')
-              img#sounds(src='_images/sounds.jpg')
 
             a.box.fancybox(href='#people')
               img(src='_images/box-simply-people.jpg')
@@ -152,7 +157,7 @@
 
             a.box.fancybox(href='#sef')
               img(src='_images/box-sef.jpg')
-              img#sef(src='_images/sef.jpg' alt='http://foodbeacon.com/')
+              img#sef(src='_images/sef.jpg')
 
   .scroll-indicatory
     
