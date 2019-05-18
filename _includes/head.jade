@@ -48,28 +48,24 @@ html(lang=locale)
       script(type='text/javascript' src='_scripts/min/flexslider-min.js')
       script(type='text/javascript' src='_scripts/min/nav-min.js')
       script(type='text/javascript' src='_scripts/min/html5ext-min.js')
-      
+
       script.
         (function() {
-   
+
           // store the slider in a local variable
           var $window = $(window),
               flexslider = { vars:{} };
-         
+
           // tiny helper function to add breakpoints
           function getGridSize() {
             return (window.innerWidth < 100) ? 2 :
                    (window.innerWidth < 750) ? 3 : 4;
           }
-         
+
           $(document).ready(function() {
             $('.fancybox').fancybox();
-            $('.flexslider').flexslider({
-              minItems: getGridSize(), // use function to pull in initial value
-              maxItems: getGridSize() // use function to pull in initial value
-            });
           });
-         
+
           // check grid size on resize event
           $window.resize(function() {
             var gridSize = getGridSize();

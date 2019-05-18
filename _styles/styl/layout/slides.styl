@@ -210,120 +210,139 @@
     float: right
     margin: 30px 1vw 0 0
 
-  .boxes
-    height: 100px
-    position: absolute
-    right: 7.5vw
-    top: 56vh
-    width: 55%
+    @media screen and (max-width: 500px)
+      float: none
 
-    @media screen and (max-width: 900px)
-      top: 45vh
-      margin: 0 15%
-      right: inherit
-      width: 60%
+  .slides-container
+    width: 100%
+    height: 400px
+    overflow: hidden
 
-    @media screen and (max-width: 700px)
-      margin: 0 10%
+#poompoom
+  margin: 100px auto
 
-    @media screen and (max-height: 975px)
-      margin-top: 5vh
+.boxes
+  // height: 100px
+  // position: absolute
+  // right: 7.5vw
+  // top: 48vh
+  margin: 0 auto
+  position: relative
+  width: 80%
 
-    @media screen and (max-height: 812px)
-      display: none
+  // @media screen and (max-width: 900px)
+  //   top: 440px
+  //   margin: 0 15%
+  //   right: inherit
+  //   width: 60%
 
-    &.bottom
-      top: 70vh
+  // @media screen and (max-width: 700px)
+  //   margin: 0 10%
 
-      @media screen and (max-width: 900px)
-        top: 64vh
+  // @media screen and (max-height: 975px)
+  //   margin-top: 0
 
-    .carousel
+  // @media screen and (max-width: 500px)
+  //   top: 540px
 
-      li
-        margin-right: 0
+  &.bottom
+    margin-top: 80px
 
-      .flex-direction-nav, &:hover .flex-direction-nav
-        .flex-prev, .flex-next
-          opacity: 1
+    // @media screen and (max-width: 900px)
+    //   top: 630px
 
-    .flex-direction-nav a
-      color: transparent
-      text-shadow: none
+    // @media screen and (max-height: 975px)
+    //   top: 64vh
 
-      &:after
-        color: $white
-        font-family: 'lindseymaddox'
-        font-size: 26px
-        position: absolute
-        right: 0
-        top: 0
-        transition: color 800ms ease
-        vertical-align: middle
+    // @media screen and (max-width: 500px)
+    //   top: 700px
 
-      &:before
-        color: $white
-        font-family: 'lindseymaddox'
-        font-size: 26px
-        position: absolute
-        right: 0
-        top: 0
-        transition: color 800ms ease
-        vertical-align: middle
+  .carousel
 
-    .flex-direction-nav a.flex-next::before
-      content: "\e900"
+    li
+      margin-right: 0
 
-    .flex-direction-nav a.flex-prev::before
-      content: "\e900"
-      transform: rotate(180deg)
-
-    .flexslider .flex-direction-nav .flex-next,
-    .flexslider:hover .flex-direction-nav .flex-next
-      right: -35px
-
-    .flexslider .flex-direction-nav .flex-prev,
-    .flexslider:hover .flex-direction-nav .flex-prev
-      left: -50px
-
-  .type
-    font-size: 1.2em
-    letter-spacing: 3px
-    position: absolute
-    primary-font($light)
-    line-height: 100px
-    right: 610px
-    text-align: right
-    text-transform: uppercase
-    top: 11px
-
-    @media screen and (max-width: 1000px)
-      right: 550px
-      top: 4px
-
-    @media screen and (max-width: 900px)
-      font-size: 1em
-      position: relative
-      right: inherit
-      text-align: center
-      top: 25px
-
-    @media screen and (max-height: 975px)
-      display: none
-
-  .box
-    display: inline-block
-    width: 100px
-
-    img
-      filter: grayscale(100%)
-      opacity: .5
-      transition: all 900ms ease
-      width: 100%
-
-      &:hover
-        filter: none
+    .flex-direction-nav, &:hover .flex-direction-nav
+      .flex-prev, .flex-next
         opacity: 1
+
+  .flex-direction-nav a
+    color: transparent
+    text-shadow: none
+
+    &:after
+      color: $white
+      font-family: 'lindseymaddox'
+      font-size: 26px
+      position: absolute
+      right: 0
+      top: 0
+      transition: color 800ms ease
+      vertical-align: middle
+
+    &:before
+      color: $white
+      font-family: 'lindseymaddox'
+      font-size: 26px
+      position: absolute
+      right: 0
+      top: 0
+      transition: color 800ms ease
+      vertical-align: middle
+
+  .flex-direction-nav a.flex-next::before
+    content: "\e900"
+
+  .flex-direction-nav a.flex-prev::before
+    content: "\e900"
+    transform: rotate(180deg)
+
+  .flexslider .flex-direction-nav .flex-next,
+  .flexslider:hover .flex-direction-nav .flex-next
+    right: -35px
+
+  .flexslider .flex-direction-nav .flex-prev,
+  .flexslider:hover .flex-direction-nav .flex-prev
+    left: -50px
+
+.type
+  color: $white
+  font-size: 1.2em
+  letter-spacing: 3px
+  position: absolute
+  primary-font($light)
+  line-height: 100px
+  text-transform: uppercase
+  top: -80px
+
+  // @media screen and (max-width: 1000px)
+  //   font-size: 1em
+  //   left: -250px
+  //   right: inherit
+  //   top: 0
+  //   width: 200px
+
+  // @media screen and (max-width: 900px)
+  //   left: inherit
+  //   line-height: 60px
+  //   position: relative
+  //   right: inherit
+  //   text-align: center
+  //   width: 100%
+
+.box
+  display: inline-block
+  width: 200px
+
+  img
+    filter: grayscale(100%)
+    opacity: .5
+    transition: all 900ms ease
+    width: 100%
+
+    &:hover
+      filter: none
+      opacity: 1
 
 .flexslider
   background: transparent

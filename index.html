@@ -43,21 +43,17 @@
         // store the slider in a local variable
         var $window = $(window),
             flexslider = { vars:{} };
-       
+      
         // tiny helper function to add breakpoints
         function getGridSize() {
           return (window.innerWidth < 100) ? 2 :
                  (window.innerWidth < 750) ? 3 : 4;
         }
-       
+      
         $(document).ready(function() {
           $('.fancybox').fancybox();
-          $('.flexslider').flexslider({
-            minItems: getGridSize(), // use function to pull in initial value
-            maxItems: getGridSize() // use function to pull in initial value
-          });
         });
-       
+      
         // check grid size on resize event
         $window.resize(function() {
           var gridSize = getGridSize();
@@ -98,10 +94,10 @@
                 <s id="s3"></s>
                 <div class="slider">
                   <div class="s1"><img src="_images/cream-legs.png" alt="Lindsey Maddox logo" class="logo">
-                    <h1 class="tag"> <span>&nbsp;&nbsp;&nbsp; Lindsey Maddox </span>is a web developer <br class="full"><span class="full">&nbsp;</span>and graphic designer, creating beauty, function, and pixel-perfection.</h1><a href="_pdf/maddox-resume.pdf" title="Lindsey Maddox resume" target="_blank" class="button">Download Resume</a>
+                    <h1 class="tag"><span>&nbsp;&nbsp;&nbsp; Lindsey Maddox</span>is a web developer<br class="full"><span class="full">&nbsp;</span>and graphic designer, creating beauty, function, and pixel-perfection.</h1><a href="_pdf/maddox-resume.pdf" title="Lindsey Maddox resume" target="_blank" class="button">Download Resume</a>
                   </div>
                   <div class="s2"><img src="_images/lindsey-maddox.png" alt="image of Lindsey Maddox" class="woo">
-                    <h2 class="testie">&ldquo;Lindsey is one of those rare talents who can design <span>and </span>code... fantastically.&rdquo;</h2>
+                    <h2 class="testie">&ldquo;Lindsey is one of those rare talents who can design<span>and</span>code... fantastically.&rdquo;</h2>
                     <p class="author">&mdash;Abbey Smith, Founder &amp; CEO, Tulu Creative</p><a href="#testimonials" class="button fancybox">View Testimonials</a>
                     <div id="testimonials" class="hideshow">
                       <p>Lindsey is wonderfully imaginative, smart and determined. She can write as well as design and she gets type. Great combination!</p>
@@ -128,20 +124,34 @@
                     </div>
                   </div>
                   <div class="s3"><img src="_images/legitsey.jpg" alt="small Lindsey Maddox logo" class="legit">
-                    <h3 class="folio">More than 13 years of experience and an impressive portfolio to back it up... </h3>
-                    <p class="proof">Lindsey delivers clean compositions resulting in intuitive and accessible client experiences. She has a knack for fusing her natural artistic abilities with her graphic design training, producing original, imaginative brainchildren.</p>
-                    <div id="hideshow"><img rel="gallery1" src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" class="fancybox"><img rel="gallery1" src="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_b.jpg" title="Electrical Power Lines and Pylons disappear over" class="fancybox"><img rel="gallery1" src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" title="Morning Godafoss" class="fancybox"><img rel="gallery1" src="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg" title="Vertical - Special Edition!" class="fancybox"></div>
-                    <div class="boxes">
-                      <h4 class="type">Design</h4>
-                      <div class="flexslider carousel">       
-                        <div class="slides"><a href="#cirrus" class="box fancybox"><img src="_images/box-cirrus.jpg"><img id="cirrus" src="_images/cirrus.jpg"></a><a href="#symphony" class="box fancybox"><img src="_images/box-symphony.jpg"><img id="symphony" src="_images/symphony.jpg"></a><a href="#travis" class="box fancybox"><img src="_images/box-travismeadows.jpg"><img id="travis" src="_images/travismeadows.jpg"></a><a href="#aidswalk" class="box fancybox"><img src="_images/box-aidswalk.jpg"><img id="aidswalk" src="_images/aidswalk.jpg"></a><a href="#kitty" class="box fancybox"><img src="_images/box-kitty.jpg"><img id="kitty" src="_images/kitty.jpg"></a><a href="#tuba" class="box fancybox"><img src="_images/box-tuba.jpg"><img id="tuba" src="_images/tuba.jpg"></a><a href="#tulu" class="box fancybox"><img src="_images/box-tulu.jpg"><img id="tulu" src="_images/tulu.jpg"></a><a href="#skulls" class="box fancybox"><img src="_images/box-skulls.jpg"><img id="skulls" src="_images/skulls.jpg"></a><a href="#petrelli" class="box fancybox"><img src="_images/box-petrelli.jpg"><img id="petrelli" src="_images/petrelli.jpg"></a><a class="flex-next icon-arrow"></a>
+                    <h3 class="folio">More than 13 years of experience and an impressive portfolio to back it up...</h3>
+                    <p class="proof">Lindsey delivers clean compositions resulting in intuitive and accessible client experiences. She has a knack for fusing her natural artistic abilities with her graphic design training, producing original, imaginative brainchildren.</p><a href="#poompoom" class="button fancybox">View Portfolio</a>
+                    <script>
+                      (function() {
+                      
+                        $(window).load(function() {
+                          $('.flexslider').flexslider({
+                            minItems: getGridSize(), // use function to pull in initial value
+                            maxItems: getGridSize() // use function to pull in initial value
+                          });
+                        });
+                      })
+                    </script>
+                    <div id="poompoom" style="display:none;">
+                      <div class="slides-container">
+                        <div class="boxes">
+                          <h4 class="type">Design</h4>
+                          <div class="flexslider carousel">
+                            <div class="slides"><a href="#cirrus" class="box fancybox"><img src="_images/box-cirrus.jpg"><img id="cirrus" src="_images/cirrus.jpg"></a><a href="#symphony" class="box fancybox"><img src="_images/box-symphony.jpg"><img id="symphony" src="_images/symphony.jpg"></a><a href="#travis" class="box fancybox"><img src="_images/box-travismeadows.jpg"><img id="travis" src="_images/travismeadows.jpg"></a><a href="#aidswalk" class="box fancybox"><img src="_images/box-aidswalk.jpg"><img id="aidswalk" src="_images/aidswalk.jpg"></a><a href="#kitty" class="box fancybox"><img src="_images/box-kitty.jpg"><img id="kitty" src="_images/kitty.jpg"></a><a href="#tuba" class="box fancybox"><img src="_images/box-tuba.jpg"><img id="tuba" src="_images/tuba.jpg"></a><a href="#tulu" class="box fancybox"><img src="_images/box-tulu.jpg"><img id="tulu" src="_images/tulu.jpg"></a><a href="#skulls" class="box fancybox"><img src="_images/box-skulls.jpg"><img id="skulls" src="_images/skulls.jpg"></a><a href="#petrelli" class="box fancybox"><img src="_images/box-petrelli.jpg"><img id="petrelli" src="_images/petrelli.jpg"></a><a class="flex-next icon-arrow"></a>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="boxes bottom">
-                      <h4 class="type">Development</h4>
-                      <div class="flexslider carousel">       
-                        <div class="slides"><a href="http://www.angryeagle.com" target="_blank" class="box"><img src="_images/box-angry-logo.jpg"></a><a href="https://www.phy.net/" target="_blank" class="box"><img src="_images/box-bkon.jpg"></a><a href="http://ngutn.com" target="_blank" class="box"><img src="_images/box-ngu.jpg"></a><a href="http://www.marthaobryan.org/" target="_blank" class="box"><img src="_images/box-martha.jpg"></a><a href="https://inquicker.com/" target="_blank" class="box"><img src="_images/box-inquicker.jpg"></a><a href="http://precisionmetalwork.com/" target="_blank" class="box"><img src="_images/box-precision.jpg"></a><a href="#coffeelunch" class="box fancybox"><img src="_images/box-coffeelunch.jpg"><img id="coffeelunch" src="_images/coffeelunch.jpg"></a><a href="#knockout" class="box fancybox"><img src="_images/box-knockout.jpg"><img id="knockout" src="_images/knockout.jpg"></a><a href="#tsu" class="box fancybox"><img src="_images/box-tsu.jpg"><img id="tsu" src="_images/tsu.jpg"></a><a href="#people" class="box fancybox"><img src="_images/box-simply-people.jpg"><img id="people" src="_images/simply-people.jpg"></a><a href="#connico" class="box fancybox"><img src="_images/box-connico.jpg"><img id="connico" src="_images/connico.jpg"></a><a href="#sef" class="box fancybox"><img src="_images/box-sef.jpg"><img id="sef" src="_images/sef.jpg"></a><a href="http://foodbeacon.com/" target="_blank" class="box"><img src="_images/box-sounds.jpg"></a></div>
+                        <div class="boxes bottom">
+                          <h4 class="type">Development</h4>
+                          <div class="flexslider carousel">
+                            <div class="slides"><a href="http://www.angryeagle.com" target="_blank" class="box"><img src="_images/box-angry-logo.jpg"><img id="angry" src="_images/angryeagle.jpg"></a><a href="https://www.phy.net/" target="_blank" class="box"><img src="_images/box-bkon.jpg"><img id="bkon" src="_images/bkon.jpg"></a><a href="http://ngutn.com" target="_blank" class="box"><img src="_images/box-ngu.jpg"></a><a href="http://www.marthaobryan.org/" target="_blank" class="box"><img src="_images/box-martha.jpg"><img id="martha" src="_images/martha.jpg"></a><a href="https://inquicker.com/" target="_blank" class="box"><img src="_images/box-inquicker.jpg"><img id="inquicker" src="_images/inquicker.jpg"></a><a href="http://precisionmetalwork.com/" target="_blank" class="box"><img src="_images/box-precision.jpg"><img id="precision" src="_images/precision.jpg"></a><a href="#coffeelunch" class="box fancybox"><img src="_images/box-coffeelunch.jpg"><img id="coffeelunch" src="_images/coffeelunch.jpg"></a><a href="#knockout" class="box fancybox"><img src="_images/box-knockout.jpg"><img id="knockout" src="_images/knockout.jpg"></a><a href="#tsu" class="box fancybox"><img src="_images/box-tsu.jpg"><img id="tsu" src="_images/tsu.jpg"></a><a href="#people" class="box fancybox"><img src="_images/box-simply-people.jpg"><img id="people" src="_images/simply-people.jpg"></a><a href="#connico" class="box fancybox"><img src="_images/box-connico.jpg"><img id="connico" src="_images/connico.jpg"></a><a href="#sef" class="box fancybox"><img src="_images/box-sef.jpg"><img id="sef" src="_images/sef.jpg"></a><a href="http://foodbeacon.com/" target="_blank" class="box"><img src="_images/box-sounds.jpg"><img id="sounds" src="_images/sounds.jpg"></a></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
