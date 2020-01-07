@@ -426,10 +426,9 @@ body {
           animation: layout-slide 400ms 100ms forwards;
 }
 .scroll-indicatory {
-  bottom: 70px;
+  left: -180px;
   position: absolute;
-  text-align: center;
-  width: 100%;
+  top: 40vh;
 }
 .scroll-indicatory .dot {
   -webkit-animation: dot 13s 3s infinite ease-in-out;
@@ -437,9 +436,9 @@ body {
   background-color: rgba(226,229,234,0.5) /* Dim all but first */;
   border: 1px solid #e2e5ea;
   border-radius: 10px;
-  display: inline-block;
+  display: block;
   height: 12px;
-  margin: 0 10px;
+  margin: 0 0 40px;
   opacity: 1;
   text-align: center;
   text-decoration: none;
@@ -449,12 +448,7 @@ body {
 }
 @media screen and (max-height: 900px) {
   .scroll-indicatory {
-    bottom: 50px;
-  }
-}
-@media screen and (max-height: 775px) {
-  .scroll-indicatory {
-    bottom: 20px;
+    display: none;
   }
 }
 .scroll-indicatory >*:nth-child(1) {
@@ -998,8 +992,7 @@ h2.headline a:hover {
   color: #3db779;
 }
 .slidesbox {
-  height: 100% /* Or set a fixed height */;
-  overflow: hidden;
+  height: 100%;
   position: relative;
 }
 .slider {
@@ -1046,7 +1039,7 @@ h2.headline a:hover {
 .slider > * {
   background: none 50% no-repeat;
   background-size: cover;
-  display: inline-block;
+  display: block;
   font-size: 1rem;
   height: 100%;
   vertical-align: top;
@@ -1066,19 +1059,19 @@ h2.headline a:hover {
   }
 }
 #s1:target ~ .slider {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 #s2:target ~ .slider {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 #s3:target ~ .slider {
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
 }
 .logo {
-  bottom: 9px;
+  bottom: 150px;
   left: 70px;
   max-width: 320px;
   position: absolute;
@@ -1107,7 +1100,6 @@ h2.headline a:hover {
   width: 180px;
 }
 .s1 {
-  margin-top: 132px;
   padding-left: 281px;
 }
 .s1:before {
@@ -1187,6 +1179,7 @@ h2.headline a:hover {
 }
 .s1 .button {
   float: right;
+  margin-top: 45px;
 }
 @media screen and (max-width: 700px) {
   .s1 .button {
@@ -1195,7 +1188,8 @@ h2.headline a:hover {
   }
 }
 .s2 {
-  padding-right: 423px;
+  float: none;
+  position: relative;
 }
 .s2:before {
   border: 2px solid #e2e5ea;
@@ -1254,7 +1248,7 @@ h2.headline a:hover {
   font-size: 1.5em;
   letter-spacing: 1px;
   line-height: 1.2em;
-  margin: 5em 1vw 0;
+  margin: 0 25vw 0 0;
   padding-bottom: 30px;
   font-family: 'Quicksand', 'Arial', sans-serif;
   font-weight: 700;
@@ -1267,17 +1261,16 @@ h2.headline a:hover {
 .s2 .author {
   letter-spacing: 2px;
   line-height: 1.8em;
-  margin: 0 1vw;
+  margin: 0 0 0 11vw;
   font-family: 'Quicksand', 'Arial', sans-serif;
   font-weight: 300;
   line-height: 1.5em;
-  text-align: right;
 }
 .s2 .woo {
   bottom: 0;
+  height: 98%;
   position: absolute;
-  right: -101%;
-  width: 48%;
+  right: -160px;
 }
 @media screen and (max-width: 700px) {
   .s2 .woo {
@@ -1293,7 +1286,7 @@ h2.headline a:hover {
 }
 .s2 .button {
   float: right;
-  margin: 80px 12% 0 0;
+  margin: 100px 25vw 0 0;
 }
 @media screen and (max-width: 700px) {
   .s2 .button {
@@ -1301,7 +1294,6 @@ h2.headline a:hover {
   }
 }
 .s3 {
-  padding: 0 7.5vw;
   position: relative;
 }
 .s3:before {
@@ -1358,11 +1350,11 @@ h2.headline a:hover {
 }
 .s3 .legit {
   float: left;
-  padding-right: 20px;
-  width: 28%;
+  padding-right: 40px;
+  width: 45%;
 }
 .s3 .folio {
-  font-size: 1.5em;
+  font-size: 1.7em;
   letter-spacing: 1.1px;
   margin: 17px 1vw 9px 4vw;
   font-family: 'Quicksand', 'Arial', sans-serif;
@@ -1371,7 +1363,7 @@ h2.headline a:hover {
   line-height: 1.3em;
 }
 .s3 .proof {
-  font-size: 0.875em;
+  font-size: 1.2em;
   letter-spacing: 1px;
   margin: 0 1vw;
   font-family: 'Quicksand', 'Arial', sans-serif;
@@ -1500,6 +1492,15 @@ h2.headline a:hover {
 .fancybox-image {
   bottom: 40px;
 }
+.fancybox-is-open .fancybox-bg {
+  opacity: 0.96;
+}
+#ball,
+#hack,
+#ngu,
+#accordion,
+#martha-redesign,
+#martha-current,
 #knockout,
 #tulu,
 #testimonials,

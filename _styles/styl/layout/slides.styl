@@ -1,7 +1,6 @@
 
 .slidesbox
-  height: 100% /* Or set a fixed height */
-  overflow: hidden
+  height: 100%
   position: relative
 
 .slider
@@ -17,7 +16,7 @@
   & > *
     background: none 50% no-repeat
     background-size: cover
-    display: inline-block
+    display: block
     font-size: 1rem
     height: 100%
     vertical-align: top
@@ -33,16 +32,16 @@
       width: 100%
 
 #s1:target ~ .slider
-  transform: translateX(0%)
+  transform: translateY(0%)
 
 #s2:target ~ .slider
-  transform: translateX(-100%)
+  transform: translateY(-100%)
 
 #s3:target ~ .slider
-  transform: translateX(-200%)
+  transform: translateY(-200%)
 
 .logo
-  bottom: 9px
+  bottom: 150px
   left: 70px
   max-width: 320px
   position: absolute
@@ -68,7 +67,7 @@
 
 .s1
   lines()
-  margin-top: 132px
+  // margin-top: 132px
   padding-left: 281px
 
   @media screen and (max-width: 1000px)
@@ -102,6 +101,7 @@
 
   .button
     float: right
+    margin-top: 45px
 
     @media screen and (max-width: 700px)
       margin: 0 auto
@@ -110,7 +110,9 @@
 
 .s2
   lines()
-  padding-right: 423px
+  float: none
+  position: relative
+  // padding-right: 423px
 
   @media screen and (max-width: 1000px)
     padding-right: 32vw
@@ -131,7 +133,7 @@
     font-size: 1.5em
     letter-spacing: 1px
     line-height: 1.2em
-    margin: 5em 1vw 0
+    margin: 0 25vw 0 0
     padding-bottom: 30px
     primary-font($bold)
 
@@ -142,15 +144,14 @@
   .author
     letter-spacing: 2px
     line-height: 1.8em
-    margin: 0 1vw
+    margin: 0 0 0 11vw
     primary-font($light)
-    text-align: right
 
   .woo
     bottom: 0
+    height: 98%
     position: absolute
-    right: -101%
-    width: 48%
+    right: -160px
 
     @media screen and (max-width: 700px)
       bottom: -140px
@@ -162,14 +163,14 @@
 
   .button
     float: right
-    margin: 80px 12% 0 0
+    margin: 100px 25vw 0 0
 
     @media screen and (max-width: 700px)
       margin: 55px 0 0
 
 .s3
   lines()
-  padding: 0 7.5vw
+  // padding: 0 7.5vw
   position: relative
 
   @media screen and (max-width: 1000px)
@@ -190,18 +191,18 @@
 
   .legit
     float: left
-    padding-right: 20px
-    width: 28%
+    padding-right: 40px
+    width: 45%
 
   .folio
-    font-size: 1.5em
+    font-size: 1.7em
     letter-spacing: 1.1px
     margin: 17px 1vw 9px 4vw
     primary-font($regular)
     line-height: 1.3em
 
   .proof
-    font-size: .875em
+    font-size: 1.2em
     letter-spacing: 1px
     margin: 0 1vw
     primary-font($light)
@@ -361,7 +362,10 @@
 .fancybox-image
   bottom: 40px
 
-#knockout, #tulu, #testimonials, #travis, #tuba, #symphony, #aidswalk, #people, #rsg, #petrelli, #sounds, #oceano, #martha, #kenricks, #kitty, #fasterfitness, #skulls, #inquicker, #angry, #coffeelunch, #bkon, #cirrus, #precision, #tsu, #connico, #sef, #inquicker, #slideshow
+.fancybox-is-open .fancybox-bg
+  opacity: .96
+
+#ball, #hack, #ngu, #accordion, #martha-redesign, #martha-current, #accordion, #knockout, #tulu, #testimonials, #travis, #tuba, #symphony, #aidswalk, #people, #rsg, #petrelli, #sounds, #oceano, #martha, #kenricks, #kitty, #fasterfitness, #skulls, #inquicker, #angry, #coffeelunch, #bkon, #cirrus, #precision, #tsu, #connico, #sef, #inquicker, #slideshow
   display: none
   max-height: 100%
   max-width: 100%

@@ -11,3 +11,4 @@
 - enlarged text on third slide paragraph
 - fixed bug where testimonials close upon click
 - repaired text spaces botched by jade compiler
+- removed Twitter link in connect menu

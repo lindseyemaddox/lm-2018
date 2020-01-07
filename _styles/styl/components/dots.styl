@@ -1,18 +1,17 @@
 
 .scroll-indicatory
-  bottom: 70px
+  left: -180px
   position: absolute
-  text-align: center
-  width: 100%
+  top: 40vh
 
   .dot
     animation: dot 13s 3s infinite ease-in-out
     background-color: rgba($white, .5) /* Dim all but first */
     border: 1px solid $white
     border-radius: 10px
-    display: inline-block
+    display: block
     height: 12px
-    margin: 0 10px
+    margin: 0 0 40px
     opacity: 1
     text-align: center
     text-decoration: none
@@ -20,10 +19,7 @@
     width: 12px
 
   @media screen and (max-height: 900px)
-    bottom: 50px
-
-  @media screen and (max-height: 775px)
-    bottom: 20px
+    display: none
 
 .scroll-indicatory >*:nth-child(1)
   animation-delay: 3.25s
