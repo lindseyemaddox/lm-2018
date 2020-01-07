@@ -94,10 +94,10 @@
                 <s id="s3"></s>
                 <div class="slider">
                   <div class="s1"><img src="_images/cream-legs.png" alt="Lindsey Maddox logo" class="logo">
-                    <h1 class="tag"><span>&nbsp;&nbsp;&nbsp; Lindsey Maddox</span>is a web developer<br class="full"><span class="full">&nbsp;</span>and graphic designer, creating beauty, function, and pixel-perfection.</h1><a href="_pdf/maddox-resume.pdf" title="Lindsey Maddox resume" target="_blank" class="button">Download Resume</a>
+                    <h1 class="tag"><span>&nbsp;&nbsp;&nbsp; Lindsey Maddox </span>is a web developer<br class="full"><span class="full">&nbsp;</span>and graphic designer, creating beauty, function, and pixel-perfection.</h1><a href="_pdf/maddox-resume.pdf" title="Lindsey Maddox resume" target="_blank" class="button">Download Resume</a>
                   </div>
                   <div class="s2"><img src="_images/lindsey-maddox.png" alt="image of Lindsey Maddox" class="woo">
-                    <h2 class="testie">&ldquo;Lindsey is one of those rare talents who can design<span>and</span>code... fantastically.&rdquo;</h2>
+                    <h2 class="testie">&ldquo;Lindsey is one of those rare talents who can design <span>and </span>code... fantastically.&rdquo;</h2>
                     <p class="author">&mdash;Abbey Smith, Founder &amp; CEO, Tulu Creative</p><a href="#testimonials" class="button fancybox">View Testimonials</a>
                     <div id="testimonials" class="hideshow">
                       <p>Lindsey is wonderfully imaginative, smart and determined. She can write as well as design and she gets type. Great combination!</p>
@@ -124,7 +124,16 @@
                     </div>
                   </div>
                   <div class="s3"><img src="_images/legitsey.jpg" alt="small Lindsey Maddox logo" class="legit">
-                    <h3 class="folio">More than 13 years of experience and an impressive portfolio to back it up...</h3>
+                    <script>
+                      const graduation = 2004;
+                      const currentYear = (new Date().getFullYear());
+                      const experience = currentYear - graduation;
+                      
+                    </script>
+                    <h3 class="folio">More than
+                      <script>document.write(experience);</script> 
+                      years of experience and an impressive portfolio to back it up...
+                    </h3>
                     <p class="proof">Lindsey delivers clean compositions resulting in intuitive and accessible client experiences. She has a knack for fusing her natural artistic abilities with her graphic design training, producing original, imaginative brainchildren.</p><a href="#poompoom" class="button fancybox">View Portfolio</a>
                     <script>
                       (function() {

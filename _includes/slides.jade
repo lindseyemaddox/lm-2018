@@ -12,7 +12,7 @@
       img.logo(src='_images/cream-legs.png' alt='Lindsey Maddox logo')
 
       h1.tag
-        span &nbsp;&nbsp;&nbsp; Lindsey Maddox
+        span &nbsp;&nbsp;&nbsp; Lindsey Maddox 
         |is a web developer
         br.full
         span.full &nbsp;
@@ -24,8 +24,8 @@
 
       img.woo(src='_images/lindsey-maddox.png' alt='image of Lindsey Maddox')
 
-      h2.testie &ldquo;Lindsey is one of those rare talents who can design
-        span and
+      h2.testie &ldquo;Lindsey is one of those rare talents who can design 
+        span and 
         |code... fantastically.&rdquo;
 
       p.author &mdash;Abbey Smith, Founder &amp; CEO, Tulu Creative
@@ -38,8 +38,17 @@
 
       img.legit(src='_images/legitsey.jpg' alt='small Lindsey Maddox logo')
 
-      h3.folio More than 13 years of experience and an impressive portfolio to back it up...
-
+      script.
+        const graduation = 2004;
+        const currentYear = (new Date().getFullYear());
+        const experience = currentYear - graduation;
+        
+      h3.folio More than
+        script.
+          document.write(experience);
+        | 
+        |years of experience and an impressive portfolio to back it up...
+        
       p.proof Lindsey delivers clean compositions resulting in intuitive and accessible client experiences. She has a knack for fusing her natural artistic abilities with her graphic design training, producing original, imaginative brainchildren.
 
       a.button.fancybox(href='#poompoom') View Portfolio
