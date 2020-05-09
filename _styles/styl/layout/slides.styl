@@ -1,6 +1,7 @@
 
 .slidesbox
   height: 100%
+  overflow: hidden
   position: relative
 
 .slider
@@ -16,7 +17,7 @@
   & > *
     background: none 50% no-repeat
     background-size: cover
-    display: block
+    display: inline-block
     font-size: 1rem
     height: 100%
     vertical-align: top
@@ -32,16 +33,15 @@
       width: 100%
 
 #s1:target ~ .slider
-  transform: translateY(0%)
+  transform: translateX(0%)
 
 #s2:target ~ .slider
-  transform: translateY(-100%)
+  transform: translateX(-100%)
 
 #s3:target ~ .slider
-  transform: translateY(-200%)
+  transform: translateX(-200%)
 
 .logo
-  bottom: 150px
   left: 70px
   max-width: 320px
   position: absolute
@@ -67,7 +67,7 @@
 
 .s1
   lines()
-  // margin-top: 132px
+  margin-top: 20px
   padding-left: 281px
 
   @media screen and (max-width: 1000px)
@@ -112,7 +112,7 @@
   lines()
   float: none
   position: relative
-  // padding-right: 423px
+  padding-right: 423px
 
   @media screen and (max-width: 1000px)
     padding-right: 32vw
@@ -133,7 +133,7 @@
     font-size: 1.5em
     letter-spacing: 1px
     line-height: 1.2em
-    margin: 0 25vw 0 0
+    margin: 5em 1vw 0
     padding-bottom: 30px
     primary-font($bold)
 
@@ -149,9 +149,9 @@
 
   .woo
     bottom: 0
-    height: 98%
     position: absolute
-    right: -160px
+    right: 0
+    width: 48%
 
     @media screen and (max-width: 700px)
       bottom: -140px
@@ -163,14 +163,14 @@
 
   .button
     float: right
-    margin: 100px 25vw 0 0
+    margin: 80px 12% 0 0
 
     @media screen and (max-width: 700px)
       margin: 55px 0 0
 
 .s3
   lines()
-  // padding: 0 7.5vw
+  padding: 15vh 7.5vw 0
   position: relative
 
   @media screen and (max-width: 1000px)
@@ -191,18 +191,18 @@
 
   .legit
     float: left
-    padding-right: 40px
-    width: 45%
+    padding-right: 20px
+    width: 28%
 
   .folio
-    font-size: 1.7em
+    font-size: 1.5em
     letter-spacing: 1.1px
     margin: 17px 1vw 9px 4vw
     primary-font($regular)
     line-height: 1.3em
 
   .proof
-    font-size: 1.2em
+    font-size: .875em
     letter-spacing: 1px
     margin: 0 1vw
     primary-font($light)
@@ -223,40 +223,35 @@
   margin: 100px auto
 
 .boxes
-  // height: 100px
-  // position: absolute
-  // right: 7.5vw
-  // top: 48vh
   margin: 0 auto
   position: relative
-  width: 80%
 
-  // @media screen and (max-width: 900px)
-  //   top: 440px
-  //   margin: 0 15%
-  //   right: inherit
-  //   width: 60%
+  @media screen and (max-width: 900px)
+    top: 440px
+    margin: 0 15%
+    right: inherit
+    width: 60%
 
-  // @media screen and (max-width: 700px)
-  //   margin: 0 10%
+  @media screen and (max-width: 700px)
+    margin: 0 10%
 
-  // @media screen and (max-height: 975px)
-  //   margin-top: 0
+  @media screen and (max-height: 975px)
+    margin-top: 0
 
-  // @media screen and (max-width: 500px)
-  //   top: 540px
+  @media screen and (max-width: 500px)
+    top: 540px
 
   &.bottom
     margin-top: 80px
 
-    // @media screen and (max-width: 900px)
-    //   top: 630px
+    @media screen and (max-width: 900px)
+      top: 630px
 
-    // @media screen and (max-height: 975px)
-    //   top: 64vh
+    @media screen and (max-height: 975px)
+      top: 64vh
 
-    // @media screen and (max-width: 500px)
-    //   top: 700px
+    @media screen and (max-width: 500px)
+      top: 700px
 
   .carousel
 
@@ -316,20 +311,20 @@
   text-transform: uppercase
   top: -80px
 
-  // @media screen and (max-width: 1000px)
-  //   font-size: 1em
-  //   left: -250px
-  //   right: inherit
-  //   top: 0
-  //   width: 200px
+  @media screen and (max-width: 1000px)
+    font-size: 1em
+    left: -250px
+    right: inherit
+    top: 0
+    width: 200px
 
-  // @media screen and (max-width: 900px)
-  //   left: inherit
-  //   line-height: 60px
-  //   position: relative
-  //   right: inherit
-  //   text-align: center
-  //   width: 100%
+  @media screen and (max-width: 900px)
+    left: inherit
+    line-height: 60px
+    position: relative
+    right: inherit
+    text-align: center
+    width: 100%
 
 .box
   display: inline-block
